@@ -51,10 +51,10 @@
     <None Include="paket.references" />
     <None Include="app.config" />
     <Compile Include="BmpString.fs" />
-    <Compile Include="StringParserTest.fs" />
-    <Compile Include="LTSVParserTest.fs" />
+    <Compile Include="StringParser.fs" />
+    <Compile Include="LTSVParser.fs" />
     <Compile Include="BinaryParser.fs" />
-    <Compile Include="TokenParserTest.fs" />
+    <Compile Include="TokenParser.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

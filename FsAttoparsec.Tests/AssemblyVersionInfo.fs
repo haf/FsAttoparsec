@@ -8,6 +8,6 @@ open System.Runtime.InteropServices
 [<assembly: AssemblyCopyright("(c) 2017 by John Doe")>]
 [<assembly: AssemblyVersion("0.0.0.0")>]
 [<assembly: AssemblyFileVersion("0.0.0.0")>]
-[<assembly: AssemblyInformationalVersion("0.0.0.59c61b")>]
+[<assembly: AssemblyInformationalVersion("0.0.0.65afac")>]
 [<assembly: AssemblyTitle("FsAttoparsec.Tests")>]
 ()

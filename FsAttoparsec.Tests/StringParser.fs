@@ -1,18 +1,17 @@
-﻿namespace Attoparsec.Tests
+﻿module Attoparsec.Tests.StringParserTest
 
 open FsCheck
 open Expecto
+open Expecto.Flip
 open System
 open Attoparsec
 open Attoparsec.Parser
 open Attoparsec.String
 
-[<TestFixture>]
-module StringParserTest =
+module Props =
 
   let cons (w: char) s = (string w) + s
 
-  [<Property>]
   let ``satisfy`` w s =
     let actual =
       cons w s
@@ -20,7 +19,6 @@ module StringParserTest =
       |> ParseResult.option
     actual = Some w
 
-  [<Property>]
   let ``char ``  w s =
     let actual =
       cons w s
@@ -28,27 +26,22 @@ module StringParserTest =
       |> ParseResult.option
     actual = Some w
 
-  [<Property>]
-  let ``anyChar`` (NonNullString s) =
+  let ``anyChar`` (StringNoNulls s) =
     let p = (parse anyChar s).Option
     match List.ofSeq s with | [] -> p = None | x::_ -> p = Some x
 
-  [<Property>]
   let ``notChar`` w s =
     (not <| String.IsNullOrEmpty(s)) ==>
       lazy (let v = s.Chars(0) in (parse (notChar w) s).Option = (if v = w then None else Some v))
 
-  [<Property>]
-  let ``string `` (NonNullString s) (NonNullString t) =
+  let ``string `` (StringNoNulls s) (StringNoNulls t) =
     (parse (pstring s) (s + t)).Option
     |> Option.map BmpString.toString = Some s
 
-  [<Property>]
-  let ``takeCount`` k (NonNullString s) =
+  let ``takeCount`` k (StringNoNulls s) =
     (k >= 0) ==> lazy (match (parse (take k) s).Option with | None -> k > String.length s | Some _ -> k <= String.length s)
 
-  [<Property>]
-  let ``takeWhile `` w (NonNullString s) =
+  let ``takeWhile `` w (StringNoNulls s) =
     let (h, t) = BmpString.span ((=) w) (BmpString.ofString s)
     s
     |> parseOnly (parser {
@@ -58,8 +51,7 @@ module StringParserTest =
     })
     |> (=) (Choice1Of2 (h, t))
 
-  [<Property>]
-  let ``takeWhile1`` w (NonNullString s) =
+  let ``takeWhile1`` w (StringNoNulls s) =
     let sp = BmpString.cons w (BmpString.ofString s)
     let (h, t) = BmpString.span (fun x -> x <= w) sp
     sp
@@ -70,18 +62,15 @@ module StringParserTest =
       return (hp, tp) })
     |> (=) (Choice1Of2 (h, t))
 
-  [<Test>]
   let ``takeWhile1 empty`` () =
     ""
     |> parse (Attoparsec.String.takeWhile1 (fun _ -> true))
     |> ParseResult.option
-    |> should equal None
+    |> Expect.isNone "Because there's no input to parse on."
 
-  [<Property>]
-  let ``endOfInput`` (NonNullString s) =
+  let ``endOfInput`` (StringNoNulls s) =
     s |> parseOnly endOfInput = (if String.IsNullOrEmpty s then Choice1Of2 () else Choice2Of2 "endOfInput")
 
-  [<Property>]
   let ``match_`` (s: int) =
     let input =  string s
     let expected = (input, s)
@@ -94,10 +83,25 @@ module StringParserTest =
     <|> (pchar '-' |>> fun _ -> -1)
     <|> ok 1
 
-  [<Property>]
-  let ``signum `` (NonNullString s) =
+  let ``signum `` (StringNoNulls s) =
     let bs = BmpString.ofString s
     ((s.StartsWith("-") || s.StartsWith("+")) |> not) ==>
       (match parse signum ("+" + s) with ParseResult.Done(s, 1) when bs = s -> true | _ -> false
       && match parse signum ("-" + s) with ParseResult.Done(s, -1) when bs = s -> true | _ -> false
       && match parse signum s |> ParseResult.feed "" with ParseResult.Done(s, 1) when bs = s -> true | _ -> false)
+
+[<Tests>]
+let tests =
+  testList "string parser" [
+    testProperty "satisfy" Props.satisfy
+    testProperty "char" Props.``char ``
+    testProperty "anyChar" Props.anyChar
+    testProperty "notChar" Props.notChar
+    testProperty "string" Props.``string ``
+    testProperty "takeCount" Props.takeCount
+    testProperty "takeWhile" Props.``takeWhile ``
+    testProperty "takeWhile1" Props.takeWhile1
+    testCase "takeWhile1 empty" Props.``takeWhile1 empty``
+    testProperty "endOfInput" Props.endOfInput
+    testProperty "signum" Props.``signum ``
+  ]

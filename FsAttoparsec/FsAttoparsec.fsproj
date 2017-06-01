@@ -38,7 +38,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="AssemblyVersionInfo.fs" />
     <Compile Include="Prelude.fs" />
     <Compile Include="ParseResult.fs" />
     <Compile Include="Trampoline.fs" />
