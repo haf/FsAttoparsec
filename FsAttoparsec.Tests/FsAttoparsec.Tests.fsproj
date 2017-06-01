@@ -50,7 +50,7 @@
   <ItemGroup>
     <None Include="paket.references" />
     <None Include="app.config" />
-    <Compile Include="BmpStringTest.fs" />
+    <Compile Include="BmpString.fs" />
     <Compile Include="StringParserTest.fs" />
     <Compile Include="LTSVParserTest.fs" />
     <Compile Include="BinaryParser.fs" />
