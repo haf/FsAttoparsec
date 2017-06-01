@@ -7,23 +7,23 @@ open Attoparsec
 
 module Props =
 
-  let ``append test`` (StringNoNulls s) (StringNoNulls t) =
+  let ``append test`` (NonEmptyString s) (NonEmptyString t) =
     BmpString.toString (BmpString.append (BmpString.ofString s) (BmpString.ofString t)) = s + t
 
-  let ``fold test`` (StringNoNulls s) =
+  let ``fold test`` (NonEmptyString s) =
     let actual = BmpString.ofString s |> BmpString.fold (fun acc c -> acc + (string c)) ""
     actual = s
 
-  let ``head test`` (StringNoNulls s) =
+  let ``head test`` (NonEmptyString s) =
     ((not <| System.String.IsNullOrEmpty s) ==>
       lazy (BmpString.head (BmpString.ofString s) |> char = s.Chars(0)))
 
-  let ``cons test`` (StringNoNulls s) =
+  let ``cons test`` (NonEmptyString s) =
     let s = BmpString.ofString s
     ((not <| BmpString.isEmpty s) ==>
       lazy ((BmpString.cons (BmpString.head s) (BmpString.tail s)) = s))
 
-  let ``span test`` (StringNoNulls s) =
+  let ``span test`` (NonEmptyString s) =
     let text = BmpString.ofString s
     let f = char >> System.Char.IsNumber
     let actual =
@@ -42,13 +42,13 @@ module Props =
   let mempty = monoid.Mempty
   let mappend x y = monoid.Mappend(x, y)
 
-  let ``monoid first law`` (StringNoNulls (Bmp x)) =
+  let ``monoid first law`` (NonEmptyString (Bmp x)) =
     mappend mempty x = x
 
-  let ``monoid second law`` (StringNoNulls (Bmp x)) =
+  let ``monoid second law`` (NonEmptyString (Bmp x)) =
     mappend x mempty = x
 
-  let ``monoid third law`` (StringNoNulls (Bmp x)) (StringNoNulls (Bmp y)) (StringNoNulls (Bmp z)) =
+  let ``monoid third law`` (NonEmptyString (Bmp x)) (NonEmptyString (Bmp y)) (NonEmptyString (Bmp z)) =
     mappend x (mappend y z) = mappend (mappend x y) z
 
 

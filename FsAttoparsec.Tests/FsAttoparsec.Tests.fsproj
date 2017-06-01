@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1cdb4592-def6-45d8-a2c2-389acead4e14</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>FsAttoparsec.Tests</RootNamespace>
     <AssemblyName>FsAttoparsec.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -55,6 +55,7 @@
     <Compile Include="LTSVParser.fs" />
     <Compile Include="BinaryParser.fs" />
     <Compile Include="TokenParser.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

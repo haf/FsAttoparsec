@@ -26,7 +26,7 @@ module Props =
       |> ParseResult.option
     actual = Some w
 
-  let ``anyChar`` (StringNoNulls s) =
+  let ``anyChar`` (NonEmptyString s) =
     let p = (parse anyChar s).Option
     match List.ofSeq s with | [] -> p = None | x::_ -> p = Some x
 
@@ -34,14 +34,14 @@ module Props =
     (not <| String.IsNullOrEmpty(s)) ==>
       lazy (let v = s.Chars(0) in (parse (notChar w) s).Option = (if v = w then None else Some v))
 
-  let ``string `` (StringNoNulls s) (StringNoNulls t) =
+  let ``string `` (NonEmptyString s) (NonEmptyString t) =
     (parse (pstring s) (s + t)).Option
     |> Option.map BmpString.toString = Some s
 
-  let ``takeCount`` k (StringNoNulls s) =
+  let ``takeCount`` k (NonEmptyString s) =
     (k >= 0) ==> lazy (match (parse (take k) s).Option with | None -> k > String.length s | Some _ -> k <= String.length s)
 
-  let ``takeWhile `` w (StringNoNulls s) =
+  let ``takeWhile `` w (NonEmptyString s) =
     let (h, t) = BmpString.span ((=) w) (BmpString.ofString s)
     s
     |> parseOnly (parser {
@@ -51,7 +51,7 @@ module Props =
     })
     |> (=) (Choice1Of2 (h, t))
 
-  let ``takeWhile1`` w (StringNoNulls s) =
+  let ``takeWhile1`` w (NonEmptyString s) =
     let sp = BmpString.cons w (BmpString.ofString s)
     let (h, t) = BmpString.span (fun x -> x <= w) sp
     sp
@@ -68,7 +68,7 @@ module Props =
     |> ParseResult.option
     |> Expect.isNone "Because there's no input to parse on."
 
-  let ``endOfInput`` (StringNoNulls s) =
+  let ``endOfInput`` (NonEmptyString s) =
     s |> parseOnly endOfInput = (if String.IsNullOrEmpty s then Choice1Of2 () else Choice2Of2 "endOfInput")
 
   let ``match_`` (s: int) =
@@ -83,7 +83,7 @@ module Props =
     <|> (pchar '-' |>> fun _ -> -1)
     <|> ok 1
 
-  let ``signum `` (StringNoNulls s) =
+  let ``signum `` (NonEmptyString s) =
     let bs = BmpString.ofString s
     ((s.StartsWith("-") || s.StartsWith("+")) |> not) ==>
       (match parse signum ("+" + s) with ParseResult.Done(s, 1) when bs = s -> true | _ -> false
