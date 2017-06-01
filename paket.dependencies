@@ -1,0 +1,8 @@
+source https://www.nuget.org/api/v2
+framework net461
+
+nuget FParsec
+nuget Expecto
+nuget Expecto.FsCheck
+nuget FSharp.Core
+nuget ParsecClone

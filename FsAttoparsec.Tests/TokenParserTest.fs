@@ -1,7 +1,6 @@
 ﻿namespace Attoparsec.Tests
 
-open NUnit.Framework
-open FsUnit
+open Expecto
 open System
 open Attoparsec
 open Attoparsec.String

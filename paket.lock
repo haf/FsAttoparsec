@@ -1,0 +1,20 @@
+FRAMEWORK: NET461
+NUGET
+  remote: https://www.nuget.org/api/v2
+    Argu (3.7)
+    Expecto (4.2.1)
+      Argu (>= 3.7)
+      FSharp.Core (>= 4.1.12)
+      Mono.Cecil (>= 0.9.6.4)
+    Expecto.FsCheck (4.2.1)
+      Expecto (>= 4.2.1)
+      FsCheck (>= 2.8)
+      FSharp.Core (>= 4.1.12)
+    FParsec (1.0.2)
+    FsCheck (2.9)
+      FSharp.Core (>= 4.1)
+    FSharp.Core (4.1.17)
+      System.ValueTuple (>= 4.3)
+    Mono.Cecil (0.9.6.4)
+    ParsecClone (2.0.1)
+    System.ValueTuple (4.3.1)

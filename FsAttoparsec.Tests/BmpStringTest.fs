@@ -1,9 +1,6 @@
 ﻿namespace Attoparsec.Tests
 
-open NUnit.Framework
-open FsUnit
 open FsCheck
-open FsCheck.NUnit
 open TestHelper
 open Attoparsec
 

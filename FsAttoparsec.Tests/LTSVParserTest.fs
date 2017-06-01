@@ -1,7 +1,5 @@
 ﻿namespace Attoparsec.Tests
 
-open NUnit.Framework
-open FsUnit
 open Attoparsec
 open Helper
 open Attoparsec.String
