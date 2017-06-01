@@ -47,7 +47,7 @@ directory 'build/pkg'
 desc 'package nugets - finds all projects and package them'
 nugets_pack :create_nugets => ['build/pkg', :versioning, :compile] do |p|
   p.configuration = Configuration
-  p.files   = [ 'FsAttoparsec.Tests/FsAttoparsec.Tests.fsproj' ]
+  p.files   = [ 'FsAttoparsec/FsAttoparsec.fsproj' ]
   p.out     = 'build/pkg'
   p.exe     = 'packages/NuGet.CommandLine/tools/NuGet.exe'
   p.with_metadata do |m|
