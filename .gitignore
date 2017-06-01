@@ -3,4 +3,4 @@ obj/
 packages/
 paket.exe
 AssemblyVersionInfo.fs
-
+build/
