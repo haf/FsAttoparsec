@@ -1,4 +1,5 @@
 ﻿namespace Attoparsec
+#nowarn "40"
 
 open Trampoline
 

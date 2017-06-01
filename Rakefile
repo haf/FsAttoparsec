@@ -10,7 +10,7 @@ Albacore::Tasks::Versionizer.new :versioning
 
 desc 'create assembly infos'
 asmver_files :assembly_info do |a|
-  a.files = FileList['**/*proj'] # optional, will find all projects recursively by default
+  a.files = FileList['**/*.fsproj'] # optional, will find all projects recursively by default
 
   a.attributes assembly_description: "FsAttoparsec is A port of Bryan O'Sullivan's attoparsec from Haskell to F#.",
                assembly_configuration: Configuration,
@@ -52,9 +52,9 @@ nugets_pack :create_nugets => ['build/pkg', :versioning, :compile] do |p|
   p.out     = 'build/pkg'
   p.exe     = 'packages/NuGet.CommandLine/tools/NuGet.exe'
   p.with_metadata do |m|
-    m.id          = 'FsAttoparsec.haf'
-    m.title       = 'FsAttoparsec'
-    m.description = "FsAttoparsec is A port of Bryan O'Sullivan's attoparsec from Haskell to F#."
+    m.id          = 'Attoparsec'
+    m.title       = 'Attoparsec'
+    m.description = "FsAttoparsec is A port of Bryan O'Sullivan's attoparsec from Haskell to F#. This fork is maintained by @haf – just aiming to give timely releases of the software to the community."
     m.authors     = 'pocketberserker, Anton Kropp, Henrik Feldt'
     m.project_url = 'https://github.com/haf/FsAttoparsec/'
     m.tags        = 'parsing, combinators, attoparsec'
@@ -64,7 +64,7 @@ end
 
 namespace :tests do
   task :unit do
-    system "src/FsAttoparsec.Tests/bin/#{Configuration}/FsAttoparsec.Tests.exe", clr_command: true
+    system "FsAttoparsec.Tests/bin/#{Configuration}/FsAttoparsec.Tests.exe", clr_command: true
   end
 end
 

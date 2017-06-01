@@ -1,4 +1,5 @@
 ﻿module Attoparsec.Tests.TokenParser
+#nowarn "40"
 
 open Expecto
 open Expecto.Flip

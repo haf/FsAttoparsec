@@ -1,4 +1,5 @@
 ﻿module Attoparsec.Trampoline
+#nowarn "40"
 
 type TrampolineT<'T> =
   | DelayValue of DelayT<'T>
@@ -20,6 +21,7 @@ and ReturnT<'T>(x :'T) =
 
 and IBind<'T> =
   abstract Bind<'U> : ('T -> ITrampoline<'U>) -> ITrampoline<'U>
+
 and BindT<'T, 'U>(t: TrampolineT<'T>, f : ('T -> ITrampoline<'U>)) =
   member this.Func = f
   member this.Value = t
@@ -38,6 +40,8 @@ let rec resume (t: ITrampoline<'T>) =
     | ReturnValue a -> resume (b.Func a.Value)
     | DelayValue k -> Choice1Of2 (fun () -> new BindT<_, _>((k.Func ()).Value, b.Func) :> _)
     | BindValue b2 -> resume <| b2.Bind(b.Func)
+  | other ->
+    failwithf "Unexpected %A"  other
 
 let rec run t =
   match resume t with
