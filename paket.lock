@@ -16,5 +16,6 @@ NUGET
     FSharp.Core (4.1.17)
       System.ValueTuple (>= 4.3)
     Mono.Cecil (0.9.6.4)
+    NuGet.CommandLine (4.1)
     ParsecClone (2.0.1)
     System.ValueTuple (4.3.1)
