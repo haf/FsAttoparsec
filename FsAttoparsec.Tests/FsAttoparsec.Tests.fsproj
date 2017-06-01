@@ -53,7 +53,7 @@
     <Compile Include="BmpStringTest.fs" />
     <Compile Include="StringParserTest.fs" />
     <Compile Include="LTSVParserTest.fs" />
-    <Compile Include="BinaryParserTest.fs" />
+    <Compile Include="BinaryParser.fs" />
     <Compile Include="TokenParserTest.fs" />
   </ItemGroup>
   <ItemGroup>
