@@ -33,7 +33,7 @@ let stringLiteral =
       |> char |> string
 
   between (str "\"") (str "\"")
-    (stringsSepBy (manySatisfy (fun c -> c <> '"' && c <> '\\')) (str "\\" >>. (escape <|> unicodeEscape)) |>> BmpString.toString)
+    (stringsSepBy (manySatisfy (fun c -> c <> '"' && c <> '\\')) (str "\\" >>. (escape <|> unicodeEscape)) |>> BMPString.toString)
 
 let jstring = stringLiteral |>> JString
 

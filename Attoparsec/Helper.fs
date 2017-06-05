@@ -29,6 +29,6 @@ module Helper =
 
   let notInClass s = not << inClass s
 
-  let (|Bmp|) s = BmpString.ofString s
+  let (|Bmp|) s = BMPString.ofString s
 
   let (|Bin|) array = ByteString.create array

@@ -37,7 +37,7 @@ module Props =
   let ``string `` (NonEmptyString s) (NonEmptyString t) =
     (parse (pstring s) (s + t))
     |> ParseResult.toOption
-    |> Option.map BmpString.toString = Some s
+    |> Option.map BMPString.toString = Some s
 
   let ``takeCount`` k (NonEmptyString s) =
     (k >= 0) ==> lazy (
@@ -46,7 +46,7 @@ module Props =
       | Some _ -> k <= String.length s)
 
   let ``takeWhile `` w (NonEmptyString s) =
-    let (h, t) = BmpString.span ((=) w) (BmpString.ofString s)
+    let (h, t) = BMPString.span ((=) w) (BMPString.ofString s)
     s
     |> parseOnly (parser {
       let! hp = takeWhile ((=) w)
@@ -56,10 +56,10 @@ module Props =
     |> (=) (Choice1Of2 (h, t))
 
   let ``takeWhile1`` w (NonEmptyString s) =
-    let sp = BmpString.cons w (BmpString.ofString s)
-    let (h, t) = BmpString.span (fun x -> x <= w) sp
+    let sp = BMPString.cons w (BMPString.ofString s)
+    let (h, t) = BMPString.span (fun x -> x <= w) sp
     sp
-    |> BmpString.toString
+    |> BMPString.toString
     |> parseOnly (parser {
       let! hp = takeWhile1 (fun x -> x <= w)
       let! tp = takeText
@@ -79,7 +79,7 @@ module Props =
     let input =  string s
     let expected = (input, s)
     input
-    |> parseOnly (pmatch signedInt |>> (fun (x, y) -> (BmpString.toString x, int y)))
+    |> parseOnly (pmatch signedInt |>> (fun (x, y) -> (BMPString.toString x, int y)))
     |> (=) (Choice1Of2 expected)
 
   let signum =
@@ -88,7 +88,7 @@ module Props =
     <|> ok 1
 
   let ``signum `` (NonEmptyString s) =
-    let bs = BmpString.ofString s
+    let bs = BMPString.ofString s
     ((s.StartsWith("-") || s.StartsWith("+")) |> not) ==>
       (match parse signum ("+" + s) with ParseResult.Done(s, 1) when bs = s -> true | _ -> false
       && match parse signum ("-" + s) with ParseResult.Done(s, -1) when bs = s -> true | _ -> false

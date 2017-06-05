@@ -5,16 +5,16 @@ open System.Collections
 open System.Collections.Generic
 open System.Diagnostics.Contracts
 
-// BMP: Basic Multilingual Plane
-[<CustomEquality; CustomComparison; SerializableAttribute; StructAttribute>]
-type BmpString(array: char[], offset: int, count: int) =
-  new (array: char[]) = BmpString(array, 0, array.Length)
+/// BMP: Basic Multilingual Plane
+[<CustomEquality; CustomComparison; Serializable; Struct>]
+type BMPString(array: char[], offset: int, count: int) =
+  new (array: char[]) = BMPString(array, 0, array.Length)
 
   member x.Array = array
   member x.Offset = offset
   member x.Count = count
 
-  static member Compare (a:BmpString, b:BmpString) =
+  static member Compare (a:BMPString, b:BMPString) =
     let x, o, l = a.Array, a.Offset, a.Count
     let x', o', l' = b.Array, b.Offset, b.Count
     if o = o' && l = l' && x = x' then 0
@@ -30,7 +30,7 @@ type BmpString(array: char[], offset: int, count: int) =
 
   override x.Equals(other) =
     match other with
-    | :? BmpString as other' -> BmpString.Compare(x, other') = 0
+    | :? BMPString as other' -> BMPString.Compare(x, other') = 0
     | _ -> false
 
   override x.GetHashCode() = hash (x.Array,x.Offset,x.Count)
@@ -76,7 +76,7 @@ type BmpString(array: char[], offset: int, count: int) =
   interface System.IComparable with
     member x.CompareTo(other) =
       match other with
-      | :? BmpString as other' -> BmpString.Compare(x, other')
+      | :? BMPString as other' -> BMPString.Compare(x, other')
       | _ -> invalidArg "other" "Cannot compare a value of another type."
 
   interface System.Collections.Generic.IEnumerable<char> with
@@ -84,54 +84,54 @@ type BmpString(array: char[], offset: int, count: int) =
     member x.GetEnumerator() = x.GetEnumerator() :> IEnumerator
 
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
-module BmpString =
+module BMPString =
 
-  let empty = BmpString([||])
+  let empty = BMPString([||])
 
-  let singleton c = BmpString(Array.create 1 c, 0, 1)
+  let singleton c = BMPString(Array.create 1 c, 0, 1)
 
-  let create arr = BmpString(arr, 0, arr.Length)
+  let create arr = BMPString(arr, 0, arr.Length)
 
-  let findIndex pred (bs:BmpString) =
+  let findIndex pred (bs:BMPString) =
     Array.FindIndex(bs.Array, bs.Offset, bs.Count, Predicate<_>(pred))
 
-  let ofSeq s = let arr = Array.ofSeq s in BmpString(arr, 0, arr.Length)
+  let ofSeq s = let arr = Array.ofSeq s in BMPString(arr, 0, arr.Length)
 
-  let ofList l = BmpString(Array.ofList l, 0, l.Length)
+  let ofList l = BMPString(Array.ofList l, 0, l.Length)
 
   let ofString (s:string) = s.ToCharArray() |> create
 
-  let toArray (bs:BmpString) =
+  let toArray (bs:BMPString) =
     if bs.Count = 0 then [||]
     else bs.Array.[bs.Offset..(bs.Offset + bs.Count - 1)]
 
-  let toSeq (bs:BmpString) = bs :> seq<char>
+  let toSeq (bs:BMPString) = bs :> seq<char>
 
-  let toList (bs:BmpString) = List.ofSeq bs
+  let toList (bs:BMPString) = List.ofSeq bs
 
-  let toString (bs:BmpString): string = System.String(bs.Array, bs.Offset, bs.Count)
+  let toString (bs:BMPString): string = System.String(bs.Array, bs.Offset, bs.Count)
 
-  let isEmpty (bs:BmpString) =
+  let isEmpty (bs:BMPString) =
     Contract.Requires(bs.Count >= 0)
     bs.Count <= 0
 
-  let length (bs:BmpString) =
+  let length (bs:BMPString) =
     Contract.Requires(bs.Count >= 0)
     bs.Count
 
-  let index (bs:BmpString) pos =
+  let index (bs:BMPString) pos =
     Contract.Requires(bs.Offset + pos <= bs.Count)
     bs.Array.[bs.Offset + pos]
 
-  let head (bs:BmpString) =
+  let head (bs:BMPString) =
     if bs.Count <= 0 then
-      failwith "Cannot take the head of an empty BmpString."
+      failwith "Cannot take the head of an empty BMPString."
     else bs.Array.[bs.Offset]
 
-  let tail (bs:BmpString) =
+  let tail (bs:BMPString) =
     Contract.Requires(bs.Count >= 1)
     if bs.Count = 1 then empty
-    else BmpString(bs.Array, bs.Offset + 1, bs.Count - 1)
+    else BMPString(bs.Array, bs.Offset + 1, bs.Count - 1)
 
   let append a b =
     if isEmpty a then b
@@ -143,9 +143,9 @@ module BmpString =
       let buffer = Array.zeroCreate<char> (l + l')
       Buffer.BlockCopy(x, o * s, buffer, 0, l*s)
       Buffer.BlockCopy(x', o' * s, buffer, l*s, l'*s)
-      BmpString(buffer, 0, l+l')
+      BMPString(buffer, 0, l+l')
 
-  let cons hd (bs:BmpString) =
+  let cons hd (bs:BMPString) =
     let hd = singleton hd
     if length bs = 0 then hd
     else append hd bs
@@ -158,26 +158,26 @@ module BmpString =
         loop tl (f acc hd)
     loop bs seed
 
-  let split pred (bs:BmpString) =
+  let split pred (bs:BMPString) =
     if isEmpty bs then empty, empty
     else
       let index = findIndex pred bs
       if index = -1 then bs, empty
       else
         let count = index - bs.Offset
-        BmpString(bs.Array, bs.Offset, count),
-        BmpString(bs.Array, index, bs.Count - count)
+        BMPString(bs.Array, bs.Offset, count),
+        BMPString(bs.Array, index, bs.Count - count)
 
   let span pred bs = split (not << pred) bs
 
-  let splitAt n (bs:BmpString) =
+  let splitAt n (bs:BMPString) =
     Contract.Requires(n >= 0)
     if isEmpty bs then empty, empty
     elif n <= 0 then empty, bs
     elif n >= bs.Count then bs, empty
     else
       let x,o,l = bs.Array, bs.Offset, bs.Count
-      BmpString(x, o, n), BmpString(x, o + n, l - n)
+      BMPString(x, o, n), BMPString(x, o + n, l - n)
 
   let skip n bs = splitAt n bs |> snd
 

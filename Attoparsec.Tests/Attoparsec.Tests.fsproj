@@ -53,7 +53,7 @@
     <!--<Compile Include="RFC2616\FParsec.fs" />
     <Compile Include="RFC2616\Attoparsec.fs" />-->
     <Compile Include="Benchmark.fs" />
-    <Compile Include="BmpString.fs" />
+    <Compile Include="BMPString.fs" />
     <Compile Include="StringParser.fs" />
     <Compile Include="LTSVParser.fs" />
     <Compile Include="BinaryParser.fs" />

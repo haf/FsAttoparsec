@@ -19,7 +19,7 @@ let ``field test`` =
     let label = takeWhile1 (string >> isMatch @"[0-9A-Za-z_\.-]")
     let fieldValue = takeWhile (string >> isMatch "[\x01-\x080\x0B\x0C\x0E-\xFF]")
     let field =
-      (fun k v -> (BmpString.toString k, BmpString.toString v))
+      (fun k v -> (BMPString.toString k, BMPString.toString v))
       <!> label <*> (pstring (intToCharStr 0x3A) *> fieldValue)
     let record: Parser<_, Record> =
       Map.ofList <!> (sepBy field (pstring (intToCharStr 0x09)))

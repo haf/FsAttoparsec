@@ -1,4 +1,4 @@
-﻿module Attoparsec.Tests.BmpString
+﻿module Attoparsec.Tests.BMPString
 
 open Expecto
 open Expecto.Flip
@@ -8,28 +8,28 @@ open Attoparsec
 module Props =
 
   let ``append test`` (NonEmptyString s) (NonEmptyString t) =
-    BmpString.toString (BmpString.append (BmpString.ofString s) (BmpString.ofString t)) = s + t
+    BMPString.toString (BMPString.append (BMPString.ofString s) (BMPString.ofString t)) = s + t
 
   let ``fold test`` (NonEmptyString s) =
-    let actual = BmpString.ofString s |> BmpString.fold (fun acc c -> acc + (string c)) ""
+    let actual = BMPString.ofString s |> BMPString.fold (fun acc c -> acc + (string c)) ""
     actual = s
 
   let ``head test`` (NonEmptyString s) =
     ((not <| System.String.IsNullOrEmpty s) ==>
-      lazy (BmpString.head (BmpString.ofString s) |> char = s.Chars(0)))
+      lazy (BMPString.head (BMPString.ofString s) |> char = s.Chars(0)))
 
   let ``cons test`` (NonEmptyString s) =
-    let s = BmpString.ofString s
-    ((not <| BmpString.isEmpty s) ==>
-      lazy ((BmpString.cons (BmpString.head s) (BmpString.tail s)) = s))
+    let s = BMPString.ofString s
+    ((not <| BMPString.isEmpty s) ==>
+      lazy ((BMPString.cons (BMPString.head s) (BMPString.tail s)) = s))
 
   let ``span test`` (NonEmptyString s) =
-    let text = BmpString.ofString s
+    let text = BMPString.ofString s
     let f = char >> System.Char.IsNumber
     let actual =
       text
-      |> BmpString.span f
-      |> (fun (x, y) -> BmpString.toString x, BmpString.toString y)
+      |> BMPString.span f
+      |> (fun (x, y) -> BMPString.toString x, BMPString.toString y)
     let f = System.Char.IsNumber
     let expected =
       (System.String(Seq.takeWhile f s |> Seq.toArray),
@@ -38,7 +38,7 @@ module Props =
 
   open Helper
 
-  let monoid = BmpString.monoid
+  let monoid = BMPString.monoid
   let mempty = monoid.mempty
   let mappend x y = monoid.mappend(x, y)
 
@@ -84,10 +84,10 @@ let tests =
 
     for i, (str, pos, expectedFront, expectedBack) in splitAtData do
       yield testCase (sprintf "splitAt test %i" i) (fun () ->
-        let str = BmpString.ofString str
-        let expectedFront = BmpString.ofString expectedFront
-        let expectedBack = BmpString.ofString expectedBack
-        let act = str |> BmpString.splitAt pos
+        let str = BMPString.ofString str
+        let expectedFront = BMPString.ofString expectedFront
+        let expectedBack = BMPString.ofString expectedBack
+        let act = str |> BMPString.splitAt pos
         act |> Expect.equal "Should have the expected front- and back."
                             (expectedFront, expectedBack))
   ]
