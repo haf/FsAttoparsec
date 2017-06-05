@@ -1,0 +1,869 @@
+// ***** BenchmarkRunner: Start   *****
+// Found benchmarks:
+//   JSONParsing.FParsec: DefaultJob [file=05.feature-pieces]
+//   JSONParsing.Attoparsec: DefaultJob [file=05.feature-pieces]
+//   JSONParsing.FParsec: DefaultJob [file=numbers]
+//   JSONParsing.Attoparsec: DefaultJob [file=numbers]
+//   JSONParsing.FParsec: DefaultJob [file=twitter100]
+//   JSONParsing.Attoparsec: DefaultJob [file=twitter100]
+
+// Validating benchmarks:
+// **************************
+// Benchmark: JSONParsing.FParsec: DefaultJob [file=05.feature-pieces]
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release
+
+// *** Build ***
+BuildScript: /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_FParsec_DefaultJob_file-05.feature-pieces.sh
+// Result = Success
+
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: mono --nollvm "/Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_FParsec_DefaultJob_file-05.feature-pieces" 
+Failed to set up high priority. Make sure you have the right permissions. Message: Success
+
+// Benchmark Process Environment Information:
+// Runtime=Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 1184479600.00 ns, 74.0300 ms/op
+
+IdleWarmup  1: 16 op, 1000.00 ns, 62.5000 ns/op
+IdleWarmup  2: 16 op, 600.00 ns, 37.5000 ns/op
+IdleWarmup  3: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  4: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  5: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  6: 16 op, 600.00 ns, 37.5000 ns/op
+IdleWarmup  7: 16 op, 600.00 ns, 37.5000 ns/op
+
+IdleTarget  1: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  2: 16 op, 900.00 ns, 56.2500 ns/op
+IdleTarget  3: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  4: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  5: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  6: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  7: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  8: 16 op, 400.00 ns, 25.0000 ns/op
+IdleTarget  9: 16 op, 400.00 ns, 25.0000 ns/op
+IdleTarget 10: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 11: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 12: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 13: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 14: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 15: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 16: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 17: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 18: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 19: 16 op, 400.00 ns, 25.0000 ns/op
+IdleTarget 20: 16 op, 500.00 ns, 31.2500 ns/op
+
+MainWarmup  1: 16 op, 1203085000.00 ns, 75.1928 ms/op
+MainWarmup  2: 16 op, 1192866600.00 ns, 74.5542 ms/op
+MainWarmup  3: 16 op, 1344673500.00 ns, 84.0421 ms/op
+MainWarmup  4: 16 op, 1254637600.00 ns, 78.4149 ms/op
+MainWarmup  5: 16 op, 1338476000.00 ns, 83.6548 ms/op
+MainWarmup  6: 16 op, 1341274000.00 ns, 83.8296 ms/op
+MainWarmup  7: 16 op, 1388068100.00 ns, 86.7543 ms/op
+MainWarmup  8: 16 op, 1355927800.00 ns, 84.7455 ms/op
+
+MainTarget  1: 16 op, 1393460400.00 ns, 87.0913 ms/op
+MainTarget  2: 16 op, 1289971400.00 ns, 80.6232 ms/op
+MainTarget  3: 16 op, 1333058300.00 ns, 83.3161 ms/op
+MainTarget  4: 16 op, 1320591200.00 ns, 82.5370 ms/op
+MainTarget  5: 16 op, 1353698300.00 ns, 84.6061 ms/op
+MainTarget  6: 16 op, 1245001200.00 ns, 77.8126 ms/op
+MainTarget  7: 16 op, 1269149300.00 ns, 79.3218 ms/op
+MainTarget  8: 16 op, 1346238900.00 ns, 84.1399 ms/op
+MainTarget  9: 16 op, 1297196900.00 ns, 81.0748 ms/op
+MainTarget 10: 16 op, 1224570200.00 ns, 76.5356 ms/op
+MainTarget 11: 16 op, 1305942200.00 ns, 81.6214 ms/op
+MainTarget 12: 16 op, 1247429600.00 ns, 77.9644 ms/op
+MainTarget 13: 16 op, 1303139200.00 ns, 81.4462 ms/op
+MainTarget 14: 16 op, 1301462300.00 ns, 81.3414 ms/op
+MainTarget 15: 16 op, 1431830700.00 ns, 89.4894 ms/op
+MainTarget 16: 16 op, 1372313800.00 ns, 85.7696 ms/op
+MainTarget 17: 16 op, 1324322100.00 ns, 82.7701 ms/op
+MainTarget 18: 16 op, 1297099800.00 ns, 81.0687 ms/op
+MainTarget 19: 16 op, 1290024400.00 ns, 80.6265 ms/op
+MainTarget 20: 16 op, 1296827000.00 ns, 81.0517 ms/op
+MainTarget 21: 16 op, 1301565000.00 ns, 81.3478 ms/op
+MainTarget 22: 16 op, 1234475500.00 ns, 77.1547 ms/op
+MainTarget 23: 16 op, 1232430000.00 ns, 77.0269 ms/op
+MainTarget 24: 16 op, 1264943200.00 ns, 79.0590 ms/op
+MainTarget 25: 16 op, 1280929100.00 ns, 80.0581 ms/op
+MainTarget 26: 16 op, 1303812800.00 ns, 81.4883 ms/op
+MainTarget 27: 16 op, 1285067400.00 ns, 80.3167 ms/op
+MainTarget 28: 16 op, 1264005300.00 ns, 79.0003 ms/op
+MainTarget 29: 16 op, 1202990000.00 ns, 75.1869 ms/op
+MainTarget 30: 16 op, 1170708200.00 ns, 73.1693 ms/op
+MainTarget 31: 16 op, 1248471800.00 ns, 78.0295 ms/op
+MainTarget 32: 16 op, 1243050200.00 ns, 77.6906 ms/op
+MainTarget 33: 16 op, 1319275200.00 ns, 82.4547 ms/op
+MainTarget 34: 16 op, 1264307500.00 ns, 79.0192 ms/op
+MainTarget 35: 16 op, 1279058300.00 ns, 79.9411 ms/op
+MainTarget 36: 16 op, 1196301400.00 ns, 74.7688 ms/op
+MainTarget 37: 16 op, 1295448800.00 ns, 80.9656 ms/op
+MainTarget 38: 16 op, 1250914100.00 ns, 78.1821 ms/op
+MainTarget 39: 16 op, 1272087400.00 ns, 79.5055 ms/op
+MainTarget 40: 16 op, 1155196300.00 ns, 72.1998 ms/op
+MainTarget 41: 16 op, 1207709600.00 ns, 75.4819 ms/op
+MainTarget 42: 16 op, 1140631200.00 ns, 71.2895 ms/op
+MainTarget 43: 16 op, 1227619400.00 ns, 76.7262 ms/op
+MainTarget 44: 16 op, 1273771700.00 ns, 79.6107 ms/op
+MainTarget 45: 16 op, 1306093000.00 ns, 81.6308 ms/op
+MainTarget 46: 16 op, 1252567400.00 ns, 78.2855 ms/op
+
+Result  1: 16 op, 1289970835.00 ns, 80.6232 ms/op
+Result  2: 16 op, 1333057735.00 ns, 83.3161 ms/op
+Result  3: 16 op, 1320590635.00 ns, 82.5369 ms/op
+Result  4: 16 op, 1353697735.00 ns, 84.6061 ms/op
+Result  5: 16 op, 1245000635.00 ns, 77.8125 ms/op
+Result  6: 16 op, 1269148735.00 ns, 79.3218 ms/op
+Result  7: 16 op, 1346238335.00 ns, 84.1399 ms/op
+Result  8: 16 op, 1297196335.00 ns, 81.0748 ms/op
+Result  9: 16 op, 1224569635.00 ns, 76.5356 ms/op
+Result 10: 16 op, 1305941635.00 ns, 81.6214 ms/op
+Result 11: 16 op, 1247429035.00 ns, 77.9643 ms/op
+Result 12: 16 op, 1303138635.00 ns, 81.4462 ms/op
+Result 13: 16 op, 1301461735.00 ns, 81.3414 ms/op
+Result 14: 16 op, 1372313235.00 ns, 85.7696 ms/op
+Result 15: 16 op, 1324321535.00 ns, 82.7701 ms/op
+Result 16: 16 op, 1297099235.00 ns, 81.0687 ms/op
+Result 17: 16 op, 1290023835.00 ns, 80.6265 ms/op
+Result 18: 16 op, 1296826435.00 ns, 81.0517 ms/op
+Result 19: 16 op, 1301564435.00 ns, 81.3478 ms/op
+Result 20: 16 op, 1234474935.00 ns, 77.1547 ms/op
+Result 21: 16 op, 1232429435.00 ns, 77.0268 ms/op
+Result 22: 16 op, 1264942635.00 ns, 79.0589 ms/op
+Result 23: 16 op, 1280928535.00 ns, 80.0580 ms/op
+Result 24: 16 op, 1303812235.00 ns, 81.4883 ms/op
+Result 25: 16 op, 1285066835.00 ns, 80.3167 ms/op
+Result 26: 16 op, 1264004735.00 ns, 79.0003 ms/op
+Result 27: 16 op, 1202989435.00 ns, 75.1868 ms/op
+Result 28: 16 op, 1170707635.00 ns, 73.1692 ms/op
+Result 29: 16 op, 1248471235.00 ns, 78.0295 ms/op
+Result 30: 16 op, 1243049635.00 ns, 77.6906 ms/op
+Result 31: 16 op, 1319274635.00 ns, 82.4547 ms/op
+Result 32: 16 op, 1264306935.00 ns, 79.0192 ms/op
+Result 33: 16 op, 1279057735.00 ns, 79.9411 ms/op
+Result 34: 16 op, 1196300835.00 ns, 74.7688 ms/op
+Result 35: 16 op, 1295448235.00 ns, 80.9655 ms/op
+Result 36: 16 op, 1250913535.00 ns, 78.1821 ms/op
+Result 37: 16 op, 1272086835.00 ns, 79.5054 ms/op
+Result 38: 16 op, 1207709035.00 ns, 75.4818 ms/op
+Result 39: 16 op, 1227618835.00 ns, 76.7262 ms/op
+Result 40: 16 op, 1273771135.00 ns, 79.6107 ms/op
+Result 41: 16 op, 1306092435.00 ns, 81.6308 ms/op
+Result 42: 16 op, 1252566835.00 ns, 78.2854 ms/op
+GC:  3105 207 207 0 736
+
+
+Mean = 79.7554 ms, StdErr = 0.4202 ms (0.53%); N = 42, StdDev = 2.7232 ms
+Min = 73.1692 ms, Q1 = 77.9643 ms, Median = 79.9996 ms, Q3 = 81.4462 ms, Max = 85.7696 ms
+IQR = 3.4819 ms, LowerFence = 72.7415 ms, UpperFence = 86.6689 ms
+ConfidenceInterval = [78.2661 ms; 81.2446 ms] (CI 99.9%), Margin = 1.4893 ms (1.87% of Mean)
+Skewness = -0.17, Kurtosis = 2.72
+
+
+// **************************
+// Benchmark: JSONParsing.Attoparsec: DefaultJob [file=05.feature-pieces]
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release
+
+// *** Build ***
+BuildScript: /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_Attoparsec_DefaultJob_file-05.feature-pieces.sh
+// Result = Success
+
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: mono --nollvm "/Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_Attoparsec_DefaultJob_file-05.feature-pieces" 
+Failed to set up high priority. Make sure you have the right permissions. Message: Success
+
+// Benchmark Process Environment Information:
+// Runtime=Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 21024377000.00 ns, 1.3140 s/op
+
+IdleWarmup  1: 16 op, 800.00 ns, 50.0000 ns/op
+IdleWarmup  2: 16 op, 600.00 ns, 37.5000 ns/op
+IdleWarmup  3: 16 op, 400.00 ns, 25.0000 ns/op
+IdleWarmup  4: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  5: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  6: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  7: 16 op, 500.00 ns, 31.2500 ns/op
+
+IdleTarget  1: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  2: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  3: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  4: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  5: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  6: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  7: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  8: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  9: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 10: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 11: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 12: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 13: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 14: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 15: 16 op, 400.00 ns, 25.0000 ns/op
+IdleTarget 16: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 17: 16 op, 800.00 ns, 50.0000 ns/op
+IdleTarget 18: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 19: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 20: 16 op, 600.00 ns, 37.5000 ns/op
+
+MainWarmup  1: 16 op, 20838698200.00 ns, 1.3024 s/op
+MainWarmup  2: 16 op, 20043054100.00 ns, 1.2527 s/op
+MainWarmup  3: 16 op, 21155030400.00 ns, 1.3222 s/op
+MainWarmup  4: 16 op, 20873034900.00 ns, 1.3046 s/op
+MainWarmup  5: 16 op, 20799213600.00 ns, 1.3000 s/op
+MainWarmup  6: 16 op, 21203357200.00 ns, 1.3252 s/op
+MainWarmup  7: 16 op, 21330958200.00 ns, 1.3332 s/op
+MainWarmup  8: 16 op, 21135623400.00 ns, 1.3210 s/op
+
+MainTarget  1: 16 op, 20849666700.00 ns, 1.3031 s/op
+MainTarget  2: 16 op, 20059361000.00 ns, 1.2537 s/op
+MainTarget  3: 16 op, 21314285600.00 ns, 1.3321 s/op
+MainTarget  4: 16 op, 20722061500.00 ns, 1.2951 s/op
+MainTarget  5: 16 op, 20480207800.00 ns, 1.2800 s/op
+MainTarget  6: 16 op, 20510552000.00 ns, 1.2819 s/op
+MainTarget  7: 16 op, 19961488200.00 ns, 1.2476 s/op
+MainTarget  8: 16 op, 21081234300.00 ns, 1.3176 s/op
+MainTarget  9: 16 op, 20699017400.00 ns, 1.2937 s/op
+MainTarget 10: 16 op, 20925050200.00 ns, 1.3078 s/op
+MainTarget 11: 16 op, 20578862300.00 ns, 1.2862 s/op
+MainTarget 12: 16 op, 20841298500.00 ns, 1.3026 s/op
+MainTarget 13: 16 op, 20943149400.00 ns, 1.3089 s/op
+MainTarget 14: 16 op, 21072064700.00 ns, 1.3170 s/op
+MainTarget 15: 16 op, 20705428600.00 ns, 1.2941 s/op
+
+Result  1: 16 op, 20849666145.00 ns, 1.3031 s/op
+Result  2: 16 op, 20059360445.00 ns, 1.2537 s/op
+Result  3: 16 op, 21314285045.00 ns, 1.3321 s/op
+Result  4: 16 op, 20722060945.00 ns, 1.2951 s/op
+Result  5: 16 op, 20480207245.00 ns, 1.2800 s/op
+Result  6: 16 op, 20510551445.00 ns, 1.2819 s/op
+Result  7: 16 op, 19961487645.00 ns, 1.2476 s/op
+Result  8: 16 op, 21081233745.00 ns, 1.3176 s/op
+Result  9: 16 op, 20699016845.00 ns, 1.2937 s/op
+Result 10: 16 op, 20925049645.00 ns, 1.3078 s/op
+Result 11: 16 op, 20578861745.00 ns, 1.2862 s/op
+Result 12: 16 op, 20841297945.00 ns, 1.3026 s/op
+Result 13: 16 op, 20943148845.00 ns, 1.3089 s/op
+Result 14: 16 op, 21072064145.00 ns, 1.3170 s/op
+Result 15: 16 op, 20705428045.00 ns, 1.2941 s/op
+GC:  86520 90 90 0 240
+
+
+Mean = 1.2948 s, StdErr = 0.0059 s (0.45%); N = 15, StdDev = 0.0228 s
+Min = 1.2476 s, Q1 = 1.2819 s, Median = 1.2951 s, Q3 = 1.3089 s, Max = 1.3321 s
+IQR = 0.0270 s, LowerFence = 1.2414 s, UpperFence = 1.3495 s
+ConfidenceInterval = [1.2704 s; 1.3191 s] (CI 99.9%), Margin = 0.0244 s (1.88% of Mean)
+Skewness = -0.56, Kurtosis = 2.57
+
+
+// **************************
+// Benchmark: JSONParsing.FParsec: DefaultJob [file=numbers]
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release
+
+// *** Build ***
+BuildScript: /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_FParsec_DefaultJob_file-numbers.sh
+// Result = Success
+
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: mono --nollvm "/Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_FParsec_DefaultJob_file-numbers" 
+Failed to set up high priority. Make sure you have the right permissions. Message: Success
+
+// Benchmark Process Environment Information:
+// Runtime=Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 10285200.00 ns, 642.8250 us/op
+Pilot  2: 32 op, 22852700.00 ns, 714.1469 us/op
+Pilot  3: 64 op, 33298800.00 ns, 520.2938 us/op
+Pilot  4: 128 op, 72964000.00 ns, 570.0313 us/op
+Pilot  5: 256 op, 139223900.00 ns, 543.8434 us/op
+Pilot  6: 512 op, 284363600.00 ns, 555.3977 us/op
+Pilot  7: 1024 op, 532929500.00 ns, 520.4390 us/op
+
+IdleWarmup  1: 1024 op, 4100.00 ns, 4.0039 ns/op
+IdleWarmup  2: 1024 op, 3500.00 ns, 3.4180 ns/op
+IdleWarmup  3: 1024 op, 3600.00 ns, 3.5156 ns/op
+IdleWarmup  4: 1024 op, 3500.00 ns, 3.4180 ns/op
+IdleWarmup  5: 1024 op, 3600.00 ns, 3.5156 ns/op
+IdleWarmup  6: 1024 op, 3500.00 ns, 3.4180 ns/op
+
+IdleTarget  1: 1024 op, 4100.00 ns, 4.0039 ns/op
+IdleTarget  2: 1024 op, 4200.00 ns, 4.1016 ns/op
+IdleTarget  3: 1024 op, 3800.00 ns, 3.7109 ns/op
+IdleTarget  4: 1024 op, 11900.00 ns, 11.6211 ns/op
+IdleTarget  5: 1024 op, 3900.00 ns, 3.8086 ns/op
+IdleTarget  6: 1024 op, 3900.00 ns, 3.8086 ns/op
+IdleTarget  7: 1024 op, 3800.00 ns, 3.7109 ns/op
+IdleTarget  8: 1024 op, 3700.00 ns, 3.6133 ns/op
+IdleTarget  9: 1024 op, 3900.00 ns, 3.8086 ns/op
+IdleTarget 10: 1024 op, 3700.00 ns, 3.6133 ns/op
+IdleTarget 11: 1024 op, 3600.00 ns, 3.5156 ns/op
+IdleTarget 12: 1024 op, 3800.00 ns, 3.7109 ns/op
+IdleTarget 13: 1024 op, 3600.00 ns, 3.5156 ns/op
+IdleTarget 14: 1024 op, 3600.00 ns, 3.5156 ns/op
+IdleTarget 15: 1024 op, 3700.00 ns, 3.6133 ns/op
+IdleTarget 16: 1024 op, 3900.00 ns, 3.8086 ns/op
+
+MainWarmup  1: 1024 op, 582522500.00 ns, 568.8696 us/op
+MainWarmup  2: 1024 op, 634232300.00 ns, 619.3675 us/op
+MainWarmup  3: 1024 op, 570520500.00 ns, 557.1489 us/op
+MainWarmup  4: 1024 op, 555008600.00 ns, 542.0006 us/op
+MainWarmup  5: 1024 op, 567304100.00 ns, 554.0079 us/op
+MainWarmup  6: 1024 op, 577543500.00 ns, 564.0073 us/op
+MainWarmup  7: 1024 op, 561704000.00 ns, 548.5391 us/op
+
+MainTarget  1: 1024 op, 569759000.00 ns, 556.4053 us/op
+MainTarget  2: 1024 op, 581348000.00 ns, 567.7227 us/op
+MainTarget  3: 1024 op, 614319200.00 ns, 599.9211 us/op
+MainTarget  4: 1024 op, 610071500.00 ns, 595.7729 us/op
+MainTarget  5: 1024 op, 589025700.00 ns, 575.2204 us/op
+MainTarget  6: 1024 op, 541749800.00 ns, 529.0525 us/op
+MainTarget  7: 1024 op, 587565200.00 ns, 573.7941 us/op
+MainTarget  8: 1024 op, 614395200.00 ns, 599.9953 us/op
+MainTarget  9: 1024 op, 535148300.00 ns, 522.6058 us/op
+MainTarget 10: 1024 op, 595286300.00 ns, 581.3343 us/op
+MainTarget 11: 1024 op, 610185800.00 ns, 595.8846 us/op
+MainTarget 12: 1024 op, 533566300.00 ns, 521.0608 us/op
+MainTarget 13: 1024 op, 557103600.00 ns, 544.0465 us/op
+MainTarget 14: 1024 op, 548819100.00 ns, 535.9562 us/op
+MainTarget 15: 1024 op, 577744100.00 ns, 564.2032 us/op
+MainTarget 16: 1024 op, 617695000.00 ns, 603.2178 us/op
+MainTarget 17: 1024 op, 591862300.00 ns, 577.9905 us/op
+MainTarget 18: 1024 op, 581241000.00 ns, 567.6182 us/op
+MainTarget 19: 1024 op, 570358400.00 ns, 556.9906 us/op
+MainTarget 20: 1024 op, 578621500.00 ns, 565.0601 us/op
+MainTarget 21: 1024 op, 553437600.00 ns, 540.4664 us/op
+MainTarget 22: 1024 op, 604205800.00 ns, 590.0447 us/op
+MainTarget 23: 1024 op, 603331900.00 ns, 589.1913 us/op
+MainTarget 24: 1024 op, 545526600.00 ns, 532.7408 us/op
+MainTarget 25: 1024 op, 578266700.00 ns, 564.7136 us/op
+MainTarget 26: 1024 op, 593558500.00 ns, 579.6470 us/op
+MainTarget 27: 1024 op, 623329700.00 ns, 608.7204 us/op
+MainTarget 28: 1024 op, 604663600.00 ns, 590.4918 us/op
+MainTarget 29: 1024 op, 585787500.00 ns, 572.0581 us/op
+MainTarget 30: 1024 op, 606642100.00 ns, 592.4239 us/op
+MainTarget 31: 1024 op, 601921400.00 ns, 587.8139 us/op
+MainTarget 32: 1024 op, 552412100.00 ns, 539.4649 us/op
+MainTarget 33: 1024 op, 526663600.00 ns, 514.3199 us/op
+MainTarget 34: 1024 op, 547725500.00 ns, 534.8882 us/op
+MainTarget 35: 1024 op, 548150100.00 ns, 535.3028 us/op
+MainTarget 36: 1024 op, 587069500.00 ns, 573.3101 us/op
+MainTarget 37: 1024 op, 595213500.00 ns, 581.2632 us/op
+MainTarget 38: 1024 op, 578535400.00 ns, 564.9760 us/op
+MainTarget 39: 1024 op, 602690500.00 ns, 588.5649 us/op
+MainTarget 40: 1024 op, 605176800.00 ns, 590.9930 us/op
+MainTarget 41: 1024 op, 616120500.00 ns, 601.6802 us/op
+MainTarget 42: 1024 op, 590899500.00 ns, 577.0503 us/op
+MainTarget 43: 1024 op, 632329800.00 ns, 617.5096 us/op
+MainTarget 44: 1024 op, 554373800.00 ns, 541.3807 us/op
+MainTarget 45: 1024 op, 557978800.00 ns, 544.9012 us/op
+MainTarget 46: 1024 op, 550748700.00 ns, 537.8405 us/op
+MainTarget 47: 1024 op, 532066600.00 ns, 519.5963 us/op
+MainTarget 48: 1024 op, 542264500.00 ns, 529.5552 us/op
+MainTarget 49: 1024 op, 547621400.00 ns, 534.7865 us/op
+MainTarget 50: 1024 op, 551359300.00 ns, 538.4368 us/op
+MainTarget 51: 1024 op, 557101900.00 ns, 544.0448 us/op
+MainTarget 52: 1024 op, 544980900.00 ns, 532.2079 us/op
+MainTarget 53: 1024 op, 547199000.00 ns, 534.3740 us/op
+MainTarget 54: 1024 op, 547915800.00 ns, 535.0740 us/op
+MainTarget 55: 1024 op, 541813100.00 ns, 529.1144 us/op
+MainTarget 56: 1024 op, 588973500.00 ns, 575.1694 us/op
+MainTarget 57: 1024 op, 539787900.00 ns, 527.1366 us/op
+MainTarget 58: 1024 op, 537890100.00 ns, 525.2833 us/op
+MainTarget 59: 1024 op, 559484300.00 ns, 546.3714 us/op
+MainTarget 60: 1024 op, 548668900.00 ns, 535.8095 us/op
+MainTarget 61: 1024 op, 540173700.00 ns, 527.5134 us/op
+MainTarget 62: 1024 op, 534859000.00 ns, 522.3232 us/op
+MainTarget 63: 1024 op, 538591200.00 ns, 525.9680 us/op
+MainTarget 64: 1024 op, 549051600.00 ns, 536.1832 us/op
+MainTarget 65: 1024 op, 552689500.00 ns, 539.7358 us/op
+MainTarget 66: 1024 op, 578849100.00 ns, 565.2823 us/op
+MainTarget 67: 1024 op, 539739000.00 ns, 527.0889 us/op
+MainTarget 68: 1024 op, 554840400.00 ns, 541.8363 us/op
+MainTarget 69: 1024 op, 536799200.00 ns, 524.2180 us/op
+MainTarget 70: 1024 op, 561688500.00 ns, 548.5239 us/op
+MainTarget 71: 1024 op, 546621600.00 ns, 533.8102 us/op
+MainTarget 72: 1024 op, 555932500.00 ns, 542.9028 us/op
+
+Result  1: 1024 op, 569754681.25 ns, 556.4011 us/op
+Result  2: 1024 op, 581343681.25 ns, 567.7184 us/op
+Result  3: 1024 op, 614314881.25 ns, 599.9169 us/op
+Result  4: 1024 op, 610067181.25 ns, 595.7687 us/op
+Result  5: 1024 op, 589021381.25 ns, 575.2162 us/op
+Result  6: 1024 op, 541745481.25 ns, 529.0483 us/op
+Result  7: 1024 op, 587560881.25 ns, 573.7899 us/op
+Result  8: 1024 op, 614390881.25 ns, 599.9911 us/op
+Result  9: 1024 op, 535143981.25 ns, 522.6015 us/op
+Result 10: 1024 op, 595281981.25 ns, 581.3301 us/op
+Result 11: 1024 op, 610181481.25 ns, 595.8804 us/op
+Result 12: 1024 op, 533561981.25 ns, 521.0566 us/op
+Result 13: 1024 op, 557099281.25 ns, 544.0423 us/op
+Result 14: 1024 op, 548814781.25 ns, 535.9519 us/op
+Result 15: 1024 op, 577739781.25 ns, 564.1990 us/op
+Result 16: 1024 op, 617690681.25 ns, 603.2136 us/op
+Result 17: 1024 op, 591857981.25 ns, 577.9863 us/op
+Result 18: 1024 op, 581236681.25 ns, 567.6139 us/op
+Result 19: 1024 op, 570354081.25 ns, 556.9864 us/op
+Result 20: 1024 op, 578617181.25 ns, 565.0558 us/op
+Result 21: 1024 op, 553433281.25 ns, 540.4622 us/op
+Result 22: 1024 op, 604201481.25 ns, 590.0405 us/op
+Result 23: 1024 op, 603327581.25 ns, 589.1871 us/op
+Result 24: 1024 op, 545522281.25 ns, 532.7366 us/op
+Result 25: 1024 op, 578262381.25 ns, 564.7094 us/op
+Result 26: 1024 op, 593554181.25 ns, 579.6428 us/op
+Result 27: 1024 op, 623325381.25 ns, 608.7162 us/op
+Result 28: 1024 op, 604659281.25 ns, 590.4876 us/op
+Result 29: 1024 op, 585783181.25 ns, 572.0539 us/op
+Result 30: 1024 op, 606637781.25 ns, 592.4197 us/op
+Result 31: 1024 op, 601917081.25 ns, 587.8096 us/op
+Result 32: 1024 op, 552407781.25 ns, 539.4607 us/op
+Result 33: 1024 op, 526659281.25 ns, 514.3157 us/op
+Result 34: 1024 op, 547721181.25 ns, 534.8840 us/op
+Result 35: 1024 op, 548145781.25 ns, 535.2986 us/op
+Result 36: 1024 op, 587065181.25 ns, 573.3058 us/op
+Result 37: 1024 op, 595209181.25 ns, 581.2590 us/op
+Result 38: 1024 op, 578531081.25 ns, 564.9718 us/op
+Result 39: 1024 op, 602686181.25 ns, 588.5607 us/op
+Result 40: 1024 op, 605172481.25 ns, 590.9888 us/op
+Result 41: 1024 op, 616116181.25 ns, 601.6760 us/op
+Result 42: 1024 op, 590895181.25 ns, 577.0461 us/op
+Result 43: 1024 op, 632325481.25 ns, 617.5054 us/op
+Result 44: 1024 op, 554369481.25 ns, 541.3764 us/op
+Result 45: 1024 op, 557974481.25 ns, 544.8970 us/op
+Result 46: 1024 op, 550744381.25 ns, 537.8363 us/op
+Result 47: 1024 op, 532062281.25 ns, 519.5921 us/op
+Result 48: 1024 op, 542260181.25 ns, 529.5510 us/op
+Result 49: 1024 op, 547617081.25 ns, 534.7823 us/op
+Result 50: 1024 op, 551354981.25 ns, 538.4326 us/op
+Result 51: 1024 op, 557097581.25 ns, 544.0406 us/op
+Result 52: 1024 op, 544976581.25 ns, 532.2037 us/op
+Result 53: 1024 op, 547194681.25 ns, 534.3698 us/op
+Result 54: 1024 op, 547911481.25 ns, 535.0698 us/op
+Result 55: 1024 op, 541808781.25 ns, 529.1101 us/op
+Result 56: 1024 op, 588969181.25 ns, 575.1652 us/op
+Result 57: 1024 op, 539783581.25 ns, 527.1324 us/op
+Result 58: 1024 op, 537885781.25 ns, 525.2791 us/op
+Result 59: 1024 op, 559479981.25 ns, 546.3672 us/op
+Result 60: 1024 op, 548664581.25 ns, 535.8053 us/op
+Result 61: 1024 op, 540169381.25 ns, 527.5092 us/op
+Result 62: 1024 op, 534854681.25 ns, 522.3190 us/op
+Result 63: 1024 op, 538586881.25 ns, 525.9638 us/op
+Result 64: 1024 op, 549047281.25 ns, 536.1790 us/op
+Result 65: 1024 op, 552685181.25 ns, 539.7316 us/op
+Result 66: 1024 op, 578844781.25 ns, 565.2781 us/op
+Result 67: 1024 op, 539734681.25 ns, 527.0846 us/op
+Result 68: 1024 op, 554836081.25 ns, 541.8321 us/op
+Result 69: 1024 op, 536794881.25 ns, 524.2138 us/op
+Result 70: 1024 op, 561684181.25 ns, 548.5197 us/op
+Result 71: 1024 op, 546617281.25 ns, 533.8059 us/op
+Result 72: 1024 op, 555928181.25 ns, 542.8986 us/op
+GC:  2592 72 72 0 73728
+
+
+Mean = 556.4952 us, StdErr = 3.2085 us (0.58%); N = 72, StdDev = 27.2247 us
+Min = 514.3157 us, Q1 = 534.5761 us, Median = 545.6321 us, Q3 = 578.8145 us, Max = 617.5054 us
+IQR = 44.2385 us, LowerFence = 468.2183 us, UpperFence = 645.1722 us
+ConfidenceInterval = [545.4808 us; 567.5095 us] (CI 99.9%), Margin = 11.0143 us (1.98% of Mean)
+Skewness = 0.39, Kurtosis = 1.83
+
+
+// **************************
+// Benchmark: JSONParsing.Attoparsec: DefaultJob [file=numbers]
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release
+
+// *** Build ***
+BuildScript: /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_Attoparsec_DefaultJob_file-numbers.sh
+// Result = Success
+
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: mono --nollvm "/Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_Attoparsec_DefaultJob_file-numbers" 
+Failed to set up high priority. Make sure you have the right permissions. Message: Success
+
+// Benchmark Process Environment Information:
+// Runtime=Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.OverflowException: Arithmetic operation resulted in an overflow.
+  at System.Decimal.op_Multiply (System.Decimal d1, System.Decimal d2) [0x0000a] in <dbb16e0bacdc4a0f87478e401bc29b6c>:0 
+  at Attoparsec.String+scientific@80-12.Invoke (System.Decimal x) [0x00086] in <5935406456f8296ca745038364403559>:0 
+  at <StartupCode$Attoparsec>.$Parser+ks@48[T,U,a,V].Invoke (System.Tuple`2[T1,T2] tupledArg) [0x0000f] in <5935406456f8296ca745038364403559>:0 
+  at <StartupCode$Attoparsec>.$Parser+Attoparsec-Parser-2-Apply@56-3[T,a,U,V].Invoke (Microsoft.FSharp.Core.Unit unitVar0) [0x00028] in <5935406456f8296ca745038364403559>:0 
+  at Attoparsec.Trampoline.run[a] (Attoparsec.Trampoline+ITrampoline`1[T] t) [0x0002a] in <5935406456f8296ca745038364403559>:0 
+  at Attoparsec.Parser.parse[a,b] (Microsoft.FSharp.Core.FSharpFunc`2[T,TResult] skip, Attoparsec.Monoid`1[T] m, Attoparsec.Parser`2[T,U] p, a input) [0x00020] in <5935406456f8296ca745038364403559>:0 
+  at Attoparsec.String.parse[a] (Attoparsec.Parser`2[T,U] p, System.String _arg1) [0x00012] in <5935406456f8296ca745038364403559>:0 
+  at Attoparsec.Tests.Benchmark+JSONParsing.Attoparsec () [0x00017] in <59354683f7258656a745038383463559>:0 
+  at BenchmarkDotNet.Autogenerated.Runnable.MainMultiAction (System.Int64 invokeCount) [0x00008] in <5dbf1374e287418aab3f057db2497142>:0 
+  at BenchmarkDotNet.Engines.Engine.Jitting () [0x00011] in <148a6427f4bd400bb3433a1d5c1e190d>:0 
+  at BenchmarkDotNet.Autogenerated.Runnable.Run (BenchmarkDotNet.Engines.IHost host) [0x00152] in <5dbf1374e287418aab3f057db2497142>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00038] in <dbb16e0bacdc4a0f87478e401bc29b6c>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00053] in <dbb16e0bacdc4a0f87478e401bc29b6c>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <dbb16e0bacdc4a0f87478e401bc29b6c>:0 
+  at BenchmarkDotNet.Autogenerated.Program.Main (System.String[] args) [0x00052] in <5dbf1374e287418aab3f057db2497142>:0 
+ExitCode != 0
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: JSONParsing.FParsec: DefaultJob [file=twitter100]
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release
+
+// *** Build ***
+BuildScript: /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_FParsec_DefaultJob_file-twitter100.sh
+// Result = Success
+
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: mono --nollvm "/Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_FParsec_DefaultJob_file-twitter100" 
+Failed to set up high priority. Make sure you have the right permissions. Message: Success
+
+// Benchmark Process Environment Information:
+// Runtime=Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 38333800.00 ns, 2.3959 ms/op
+Pilot  2: 32 op, 79740000.00 ns, 2.4919 ms/op
+Pilot  3: 64 op, 157434300.00 ns, 2.4599 ms/op
+Pilot  4: 128 op, 310743500.00 ns, 2.4277 ms/op
+Pilot  5: 256 op, 623766800.00 ns, 2.4366 ms/op
+
+IdleWarmup  1: 256 op, 2200.00 ns, 8.5938 ns/op
+IdleWarmup  2: 256 op, 1400.00 ns, 5.4688 ns/op
+IdleWarmup  3: 256 op, 1200.00 ns, 4.6875 ns/op
+IdleWarmup  4: 256 op, 1200.00 ns, 4.6875 ns/op
+IdleWarmup  5: 256 op, 1200.00 ns, 4.6875 ns/op
+IdleWarmup  6: 256 op, 1200.00 ns, 4.6875 ns/op
+IdleWarmup  7: 256 op, 1400.00 ns, 5.4688 ns/op
+
+IdleTarget  1: 256 op, 1100.00 ns, 4.2969 ns/op
+IdleTarget  2: 256 op, 1200.00 ns, 4.6875 ns/op
+IdleTarget  3: 256 op, 1500.00 ns, 5.8594 ns/op
+IdleTarget  4: 256 op, 1500.00 ns, 5.8594 ns/op
+IdleTarget  5: 256 op, 1500.00 ns, 5.8594 ns/op
+IdleTarget  6: 256 op, 1400.00 ns, 5.4688 ns/op
+IdleTarget  7: 256 op, 1400.00 ns, 5.4688 ns/op
+IdleTarget  8: 256 op, 1300.00 ns, 5.0781 ns/op
+IdleTarget  9: 256 op, 1400.00 ns, 5.4688 ns/op
+IdleTarget 10: 256 op, 1500.00 ns, 5.8594 ns/op
+IdleTarget 11: 256 op, 1500.00 ns, 5.8594 ns/op
+IdleTarget 12: 256 op, 1400.00 ns, 5.4688 ns/op
+IdleTarget 13: 256 op, 1400.00 ns, 5.4688 ns/op
+IdleTarget 14: 256 op, 1300.00 ns, 5.0781 ns/op
+IdleTarget 15: 256 op, 1300.00 ns, 5.0781 ns/op
+IdleTarget 16: 256 op, 1300.00 ns, 5.0781 ns/op
+IdleTarget 17: 256 op, 1300.00 ns, 5.0781 ns/op
+IdleTarget 18: 256 op, 1200.00 ns, 4.6875 ns/op
+IdleTarget 19: 256 op, 1100.00 ns, 4.2969 ns/op
+IdleTarget 20: 256 op, 1200.00 ns, 4.6875 ns/op
+
+MainWarmup  1: 256 op, 616627100.00 ns, 2.4087 ms/op
+MainWarmup  2: 256 op, 606817500.00 ns, 2.3704 ms/op
+MainWarmup  3: 256 op, 628004400.00 ns, 2.4531 ms/op
+MainWarmup  4: 256 op, 615790400.00 ns, 2.4054 ms/op
+MainWarmup  5: 256 op, 648026700.00 ns, 2.5314 ms/op
+MainWarmup  6: 256 op, 635999900.00 ns, 2.4844 ms/op
+
+MainTarget  1: 256 op, 624401500.00 ns, 2.4391 ms/op
+MainTarget  2: 256 op, 618822200.00 ns, 2.4173 ms/op
+MainTarget  3: 256 op, 630130100.00 ns, 2.4614 ms/op
+MainTarget  4: 256 op, 668827700.00 ns, 2.6126 ms/op
+MainTarget  5: 256 op, 651246800.00 ns, 2.5439 ms/op
+MainTarget  6: 256 op, 659532500.00 ns, 2.5763 ms/op
+MainTarget  7: 256 op, 658963000.00 ns, 2.5741 ms/op
+MainTarget  8: 256 op, 648634600.00 ns, 2.5337 ms/op
+MainTarget  9: 256 op, 680314700.00 ns, 2.6575 ms/op
+MainTarget 10: 256 op, 640643500.00 ns, 2.5025 ms/op
+MainTarget 11: 256 op, 629478800.00 ns, 2.4589 ms/op
+MainTarget 12: 256 op, 638860500.00 ns, 2.4955 ms/op
+MainTarget 13: 256 op, 684471300.00 ns, 2.6737 ms/op
+MainTarget 14: 256 op, 653007800.00 ns, 2.5508 ms/op
+MainTarget 15: 256 op, 643840200.00 ns, 2.5150 ms/op
+MainTarget 16: 256 op, 655354000.00 ns, 2.5600 ms/op
+MainTarget 17: 256 op, 624943200.00 ns, 2.4412 ms/op
+MainTarget 18: 256 op, 612779100.00 ns, 2.3937 ms/op
+MainTarget 19: 256 op, 639265200.00 ns, 2.4971 ms/op
+MainTarget 20: 256 op, 654777500.00 ns, 2.5577 ms/op
+MainTarget 21: 256 op, 654921500.00 ns, 2.5583 ms/op
+MainTarget 22: 256 op, 642564200.00 ns, 2.5100 ms/op
+MainTarget 23: 256 op, 697021400.00 ns, 2.7227 ms/op
+MainTarget 24: 256 op, 624689400.00 ns, 2.4402 ms/op
+MainTarget 25: 256 op, 634036400.00 ns, 2.4767 ms/op
+MainTarget 26: 256 op, 614261700.00 ns, 2.3995 ms/op
+MainTarget 27: 256 op, 609482400.00 ns, 2.3808 ms/op
+MainTarget 28: 256 op, 617401600.00 ns, 2.4117 ms/op
+MainTarget 29: 256 op, 638266300.00 ns, 2.4932 ms/op
+MainTarget 30: 256 op, 616880000.00 ns, 2.4097 ms/op
+MainTarget 31: 256 op, 628092400.00 ns, 2.4535 ms/op
+MainTarget 32: 256 op, 623238200.00 ns, 2.4345 ms/op
+MainTarget 33: 256 op, 630838700.00 ns, 2.4642 ms/op
+MainTarget 34: 256 op, 622018400.00 ns, 2.4298 ms/op
+MainTarget 35: 256 op, 657106900.00 ns, 2.5668 ms/op
+MainTarget 36: 256 op, 628245700.00 ns, 2.4541 ms/op
+
+Result  1: 256 op, 624400160.00 ns, 2.4391 ms/op
+Result  2: 256 op, 618820860.00 ns, 2.4173 ms/op
+Result  3: 256 op, 630128760.00 ns, 2.4614 ms/op
+Result  4: 256 op, 668826360.00 ns, 2.6126 ms/op
+Result  5: 256 op, 651245460.00 ns, 2.5439 ms/op
+Result  6: 256 op, 659531160.00 ns, 2.5763 ms/op
+Result  7: 256 op, 658961660.00 ns, 2.5741 ms/op
+Result  8: 256 op, 648633260.00 ns, 2.5337 ms/op
+Result  9: 256 op, 680313360.00 ns, 2.6575 ms/op
+Result 10: 256 op, 640642160.00 ns, 2.5025 ms/op
+Result 11: 256 op, 629477460.00 ns, 2.4589 ms/op
+Result 12: 256 op, 638859160.00 ns, 2.4955 ms/op
+Result 13: 256 op, 684469960.00 ns, 2.6737 ms/op
+Result 14: 256 op, 653006460.00 ns, 2.5508 ms/op
+Result 15: 256 op, 643838860.00 ns, 2.5150 ms/op
+Result 16: 256 op, 655352660.00 ns, 2.5600 ms/op
+Result 17: 256 op, 624941860.00 ns, 2.4412 ms/op
+Result 18: 256 op, 612777760.00 ns, 2.3937 ms/op
+Result 19: 256 op, 639263860.00 ns, 2.4971 ms/op
+Result 20: 256 op, 654776160.00 ns, 2.5577 ms/op
+Result 21: 256 op, 654920160.00 ns, 2.5583 ms/op
+Result 22: 256 op, 642562860.00 ns, 2.5100 ms/op
+Result 23: 256 op, 697020060.00 ns, 2.7227 ms/op
+Result 24: 256 op, 624688060.00 ns, 2.4402 ms/op
+Result 25: 256 op, 634035060.00 ns, 2.4767 ms/op
+Result 26: 256 op, 614260360.00 ns, 2.3995 ms/op
+Result 27: 256 op, 609481060.00 ns, 2.3808 ms/op
+Result 28: 256 op, 617400260.00 ns, 2.4117 ms/op
+Result 29: 256 op, 638264960.00 ns, 2.4932 ms/op
+Result 30: 256 op, 616878660.00 ns, 2.4097 ms/op
+Result 31: 256 op, 628091060.00 ns, 2.4535 ms/op
+Result 32: 256 op, 623236860.00 ns, 2.4345 ms/op
+Result 33: 256 op, 630837360.00 ns, 2.4642 ms/op
+Result 34: 256 op, 622017060.00 ns, 2.4298 ms/op
+Result 35: 256 op, 657105560.00 ns, 2.5668 ms/op
+Result 36: 256 op, 628244360.00 ns, 2.4541 ms/op
+GC:  1548 108 108 0 9216
+
+
+Mean = 2.5019 ms, StdErr = 0.0137 ms (0.55%); N = 36, StdDev = 0.0823 ms
+Min = 2.3808 ms, Q1 = 2.4396 ms, Median = 2.4944 ms, Q3 = 2.5580 ms, Max = 2.7227 ms
+IQR = 0.1184 ms, LowerFence = 2.2621 ms, UpperFence = 2.7356 ms
+ConfidenceInterval = [2.4526 ms; 2.5511 ms] (CI 99.9%), Margin = 0.0492 ms (1.97% of Mean)
+Skewness = 0.74, Kurtosis = 2.95
+
+
+// **************************
+// Benchmark: JSONParsing.Attoparsec: DefaultJob [file=twitter100]
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release
+
+// *** Build ***
+BuildScript: /Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_Attoparsec_DefaultJob_file-twitter100.sh
+// Result = Success
+
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: mono --nollvm "/Users/h/dev/logibit/_scratch/FsAttoparsec/Attoparsec.Tests/bin/Release/JSONParsing_Attoparsec_DefaultJob_file-twitter100" 
+Failed to set up high priority. Make sure you have the right permissions. Message: Success
+
+// Benchmark Process Environment Information:
+// Runtime=Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 916407300.00 ns, 57.2755 ms/op
+
+IdleWarmup  1: 16 op, 700.00 ns, 43.7500 ns/op
+IdleWarmup  2: 16 op, 600.00 ns, 37.5000 ns/op
+IdleWarmup  3: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  4: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  5: 16 op, 600.00 ns, 37.5000 ns/op
+IdleWarmup  6: 16 op, 500.00 ns, 31.2500 ns/op
+IdleWarmup  7: 16 op, 500.00 ns, 31.2500 ns/op
+
+IdleTarget  1: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  2: 16 op, 1300.00 ns, 81.2500 ns/op
+IdleTarget  3: 16 op, 800.00 ns, 50.0000 ns/op
+IdleTarget  4: 16 op, 700.00 ns, 43.7500 ns/op
+IdleTarget  5: 16 op, 700.00 ns, 43.7500 ns/op
+IdleTarget  6: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  7: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget  8: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget  9: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 10: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 11: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 12: 16 op, 1100.00 ns, 68.7500 ns/op
+IdleTarget 13: 16 op, 800.00 ns, 50.0000 ns/op
+IdleTarget 14: 16 op, 700.00 ns, 43.7500 ns/op
+IdleTarget 15: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 16: 16 op, 600.00 ns, 37.5000 ns/op
+IdleTarget 17: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 18: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 19: 16 op, 500.00 ns, 31.2500 ns/op
+IdleTarget 20: 16 op, 500.00 ns, 31.2500 ns/op
+
+MainWarmup  1: 16 op, 933955600.00 ns, 58.3722 ms/op
+MainWarmup  2: 16 op, 941100800.00 ns, 58.8188 ms/op
+MainWarmup  3: 16 op, 1024360600.00 ns, 64.0225 ms/op
+MainWarmup  4: 16 op, 998036500.00 ns, 62.3773 ms/op
+MainWarmup  5: 16 op, 1001081800.00 ns, 62.5676 ms/op
+MainWarmup  6: 16 op, 1028918500.00 ns, 64.3074 ms/op
+MainWarmup  7: 16 op, 903133300.00 ns, 56.4458 ms/op
+
+MainTarget  1: 16 op, 871033300.00 ns, 54.4396 ms/op
+MainTarget  2: 16 op, 864061600.00 ns, 54.0039 ms/op
+MainTarget  3: 16 op, 890336500.00 ns, 55.6460 ms/op
+MainTarget  4: 16 op, 888363200.00 ns, 55.5227 ms/op
+MainTarget  5: 16 op, 883937600.00 ns, 55.2461 ms/op
+MainTarget  6: 16 op, 885609500.00 ns, 55.3506 ms/op
+MainTarget  7: 16 op, 867136500.00 ns, 54.1960 ms/op
+MainTarget  8: 16 op, 887510600.00 ns, 55.4694 ms/op
+MainTarget  9: 16 op, 888922700.00 ns, 55.5577 ms/op
+MainTarget 10: 16 op, 875930200.00 ns, 54.7456 ms/op
+MainTarget 11: 16 op, 872112500.00 ns, 54.5070 ms/op
+MainTarget 12: 16 op, 871570700.00 ns, 54.4732 ms/op
+MainTarget 13: 16 op, 887493000.00 ns, 55.4683 ms/op
+MainTarget 14: 16 op, 1036563000.00 ns, 64.7852 ms/op
+MainTarget 15: 16 op, 1018201800.00 ns, 63.6376 ms/op
+
+Result  1: 16 op, 871032635.00 ns, 54.4395 ms/op
+Result  2: 16 op, 864060935.00 ns, 54.0038 ms/op
+Result  3: 16 op, 890335835.00 ns, 55.6460 ms/op
+Result  4: 16 op, 888362535.00 ns, 55.5227 ms/op
+Result  5: 16 op, 883936935.00 ns, 55.2461 ms/op
+Result  6: 16 op, 885608835.00 ns, 55.3506 ms/op
+Result  7: 16 op, 867135835.00 ns, 54.1960 ms/op
+Result  8: 16 op, 887509935.00 ns, 55.4694 ms/op
+Result  9: 16 op, 888922035.00 ns, 55.5576 ms/op
+Result 10: 16 op, 875929535.00 ns, 54.7456 ms/op
+Result 11: 16 op, 872111835.00 ns, 54.5070 ms/op
+Result 12: 16 op, 871570035.00 ns, 54.4731 ms/op
+Result 13: 16 op, 887492335.00 ns, 55.4683 ms/op
+GC:  4530 0 0 0 240
+
+
+Mean = 54.9712 ms, StdErr = 0.1631 ms (0.30%); N = 13, StdDev = 0.5882 ms
+Min = 54.0038 ms, Q1 = 54.4563 ms, Median = 55.2461 ms, Q3 = 55.4960 ms, Max = 55.6460 ms
+IQR = 1.0397 ms, LowerFence = 52.8968 ms, UpperFence = 57.0555 ms
+ConfidenceInterval = [54.2668 ms; 55.6756 ms] (CI 99.9%), Margin = 0.7044 ms (1.28% of Mean)
+Skewness = -0.29, Kurtosis = 1.28
+
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/JSONParsing-measurements.csv
+  BuildPlots.R
+  BenchmarkDotNet.Artifacts/results/JSONParsing-boxplot.png
+  BenchmarkDotNet.Artifacts/results/JSONParsing-barplot.png
+  BenchmarkDotNet.Artifacts/results/JSONParsing-report.csv
+  BenchmarkDotNet.Artifacts/results/JSONParsing-report-github.md
+  BenchmarkDotNet.Artifacts/results/JSONParsing-report.html
+
+// * Detailed results *
+JSONParsing.FParsec: DefaultJob [file=05.feature-pieces]
+Runtime = Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit ; GC = Concurrent Workstation
+Mean = 79.7554 ms, StdErr = 0.4202 ms (0.53%); N = 42, StdDev = 2.7232 ms
+Min = 73.1692 ms, Q1 = 77.9643 ms, Median = 79.9996 ms, Q3 = 81.4462 ms, Max = 85.7696 ms
+IQR = 3.4819 ms, LowerFence = 72.7415 ms, UpperFence = 86.6689 ms
+ConfidenceInterval = [78.2661 ms; 81.2446 ms] (CI 99.9%), Margin = 1.4893 ms (1.87% of Mean)
+Skewness = -0.17, Kurtosis = 2.72
+
+
+JSONParsing.Attoparsec: DefaultJob [file=05.feature-pieces]
+Runtime = Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit ; GC = Concurrent Workstation
+Mean = 1.2948 s, StdErr = 0.0059 s (0.45%); N = 15, StdDev = 0.0228 s
+Min = 1.2476 s, Q1 = 1.2819 s, Median = 1.2951 s, Q3 = 1.3089 s, Max = 1.3321 s
+IQR = 0.0270 s, LowerFence = 1.2414 s, UpperFence = 1.3495 s
+ConfidenceInterval = [1.2704 s; 1.3191 s] (CI 99.9%), Margin = 0.0244 s (1.88% of Mean)
+Skewness = -0.56, Kurtosis = 2.57
+
+
+JSONParsing.FParsec: DefaultJob [file=numbers]
+Runtime = Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit ; GC = Concurrent Workstation
+Mean = 556.4952 us, StdErr = 3.2085 us (0.58%); N = 72, StdDev = 27.2247 us
+Min = 514.3157 us, Q1 = 534.5761 us, Median = 545.6321 us, Q3 = 578.8145 us, Max = 617.5054 us
+IQR = 44.2385 us, LowerFence = 468.2183 us, UpperFence = 645.1722 us
+ConfidenceInterval = [545.4808 us; 567.5095 us] (CI 99.9%), Margin = 11.0143 us (1.98% of Mean)
+Skewness = 0.39, Kurtosis = 1.83
+
+
+JSONParsing.Attoparsec: DefaultJob [file=numbers]
+Runtime = ; GC = 
+There are no any results runs
+
+JSONParsing.FParsec: DefaultJob [file=twitter100]
+Runtime = Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit ; GC = Concurrent Workstation
+Mean = 2.5019 ms, StdErr = 0.0137 ms (0.55%); N = 36, StdDev = 0.0823 ms
+Min = 2.3808 ms, Q1 = 2.4396 ms, Median = 2.4944 ms, Q3 = 2.5580 ms, Max = 2.7227 ms
+IQR = 0.1184 ms, LowerFence = 2.2621 ms, UpperFence = 2.7356 ms
+ConfidenceInterval = [2.4526 ms; 2.5511 ms] (CI 99.9%), Margin = 0.0492 ms (1.97% of Mean)
+Skewness = 0.74, Kurtosis = 2.95
+
+
+JSONParsing.Attoparsec: DefaultJob [file=twitter100]
+Runtime = Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit ; GC = Concurrent Workstation
+Mean = 54.9712 ms, StdErr = 0.1631 ms (0.30%); N = 13, StdDev = 0.5882 ms
+Min = 54.0038 ms, Q1 = 54.4563 ms, Median = 55.2461 ms, Q3 = 55.4960 ms, Max = 55.6460 ms
+IQR = 1.0397 ms, LowerFence = 52.8968 ms, UpperFence = 57.0555 ms
+ConfidenceInterval = [54.2668 ms; 55.6756 ms] (CI 99.9%), Margin = 0.7044 ms (1.28% of Mean)
+Skewness = -0.29, Kurtosis = 1.28
+
+
+Total time: 00:11:38 (698.06 sec)
+
+// * Summary *
+
+BenchmarkDotNet=v0.10.6, OS=Mac OS X 10.11
+Processor=Intel Core i7-4870HQ CPU 2.50GHz (Haswell), ProcessorCount=8
+Frequency=10000000 Hz, Resolution=100.0000 ns, Timer=UNKNOWN
+  [Host]     : Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+  DefaultJob : Mono 4.8.1 (Stable 4.8.1.0/22a39d7), 64bit 
+
+
+     Method |              file |           Mean |        Error |       StdDev |         Median | Scaled | ScaledSD |
+----------- |------------------ |---------------:|-------------:|-------------:|---------------:|-------:|---------:|
+    FParsec | 05.feature-pieces |    79,755.4 us |  1,489.26 us |  2,723.20 us |    79,999.6 us |   1.00 |     0.00 |
+ Attoparsec | 05.feature-pieces | 1,294,765.5 us | 24,383.71 us | 22,808.53 us | 1,295,128.8 us |  16.25 |     0.62 |
+    FParsec |           numbers |       556.5 us |     11.01 us |     27.22 us |       545.6 us |   1.00 |     0.00 |
+ Attoparsec |           numbers |             NA |           NA |           NA |             NA |      ? |        ? |
+    FParsec |        twitter100 |     2,501.9 us |     49.25 us |     82.28 us |     2,494.4 us |   1.00 |     0.00 |
+ Attoparsec |        twitter100 |    54,971.2 us |    704.41 us |    588.22 us |    55,246.1 us |  21.99 |     0.73 |
+
+Benchmarks with issues:
+  JSONParsing.Attoparsec: DefaultJob [file=numbers]
+
+// * Hints *
+Outliers
+  JSONParsing.FParsec: Default    -> 4 outliers were removed
+  JSONParsing.Attoparsec: Default -> 2 outliers were removed
+
+// * Legends *
+  file     : Value of the 'file' parameter
+  Mean     : Arithmetic mean of all measurements
+  Error    : Half of 99.9% confidence interval
+  StdDev   : Standard deviation of all measurements
+  Median   : Value separating the higher half of all measurements (50th percentile)
+  Scaled   : Mean(CurrentBenchmark) / Mean(BaselineBenchmark)
+  ScaledSD : Standard deviation of ratio of distibution of [CurrentBenchmark] and [BaselineBenchmark]
+
+// ***** BenchmarkRunner: End *****

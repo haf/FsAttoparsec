@@ -1,0 +1,9 @@
+﻿<Properties StartupConfiguration="{1CDB4592-DEF6-45D8-A2C2-389ACEAD4E14}|Default">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Attoparsec.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

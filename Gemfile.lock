@@ -17,7 +17,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  albacore (~> 2.6.4)
+  albacore
 
 BUNDLED WITH
    1.15.0

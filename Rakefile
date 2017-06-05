@@ -12,7 +12,7 @@ desc 'create assembly infos'
 asmver_files :assembly_info do |a|
   a.files = FileList['**/*.fsproj'] # optional, will find all projects recursively by default
 
-  a.attributes assembly_description: "FsAttoparsec is A port of Bryan O'Sullivan's attoparsec from Haskell to F#.",
+  a.attributes assembly_description: "Attoparsec is a port of Bryan O'Sullivan's attoparsec from Haskell to F#.",
                assembly_configuration: Configuration,
                assembly_copyright: "(c) 2016 by pocketberserker",
                assembly_version: ENV['LONG_VERSION'],
@@ -24,7 +24,7 @@ desc 'Perform fast build (warn: doesn\'t d/l deps)'
 build :quick_compile do |b|
   b.prop 'Configuration', Configuration
   b.logging = 'detailed'
-  b.sln     = 'FsAttoparsec.sln'
+  b.sln     = 'Attoparsec.sln'
 end
 
 task :paket_bootstrap do
@@ -39,7 +39,7 @@ end
 desc 'Perform full build'
 build :compile => [:versioning, :restore, :assembly_info] do |b|
   b.prop 'Configuration', Configuration
-  b.sln = 'FsAttoparsec.sln'
+  b.sln = 'Attoparsec.sln'
 end
 
 directory 'build/pkg'
@@ -47,13 +47,13 @@ directory 'build/pkg'
 desc 'package nugets - finds all projects and package them'
 nugets_pack :create_nugets => ['build/pkg', :versioning, :compile] do |p|
   p.configuration = Configuration
-  p.files   = [ 'FsAttoparsec/FsAttoparsec.fsproj' ]
+  p.files   = [ 'Attoparsec/Attoparsec.fsproj' ]
   p.out     = 'build/pkg'
   p.exe     = 'packages/NuGet.CommandLine/tools/NuGet.exe'
   p.with_metadata do |m|
     m.id          = 'Attoparsec'
     m.title       = 'Attoparsec'
-    m.description = "FsAttoparsec is A port of Bryan O'Sullivan's attoparsec from Haskell to F#. This fork is maintained by @haf – just aiming to give timely releases of the software to the community."
+    m.description = "Attoparsec is a port of Bryan O'Sullivan's attoparsec from Haskell to F#. This fork is maintained by @haf – just aiming to give timely releases of the software to the community."
     m.authors     = 'pocketberserker, Anton Kropp, Henrik Feldt'
     m.project_url = 'https://github.com/haf/FsAttoparsec/'
     m.tags        = 'parsing, combinators, attoparsec'
@@ -63,7 +63,7 @@ end
 
 namespace :tests do
   task :unit do
-    system "FsAttoparsec.Tests/bin/#{Configuration}/FsAttoparsec.Tests.exe", clr_command: true
+    system "Attoparsec.Tests/bin/#{Configuration}/Attoparsec.Tests.exe", clr_command: true
   end
 end
 

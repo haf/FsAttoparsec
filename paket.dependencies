@@ -5,5 +5,5 @@ nuget NuGet.CommandLine
 nuget FParsec
 nuget Expecto
 nuget Expecto.FsCheck
+nuget Expecto.BenchmarkDotNet
 nuget FSharp.Core
-nuget ParsecClone
