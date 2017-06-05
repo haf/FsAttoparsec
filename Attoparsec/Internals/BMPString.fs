@@ -83,7 +83,6 @@ type BMPString(array: char[], offset: int, count: int) =
     member x.GetEnumerator() = x.GetEnumerator()
     member x.GetEnumerator() = x.GetEnumerator() :> IEnumerator
 
-[<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module BMPString =
 
   let empty = BMPString([||])
@@ -204,6 +203,7 @@ module BMPString =
 
   let substring pos n bs = take n (skip pos bs)
 
-  let monoid = { new Monoid<_> with
-    override x.mempty = empty
-    override x.mappend(a, b) = append a b }
+  let monoid =
+    { new Monoid<_> with
+      override x.mempty = empty
+      override x.mappend (a, b) = append a b }

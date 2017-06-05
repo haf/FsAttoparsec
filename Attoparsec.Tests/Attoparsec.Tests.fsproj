@@ -50,8 +50,8 @@
     <Compile Include="JSON\Ast.fs" />
     <Compile Include="JSON\FParsec.fs" />
     <Compile Include="JSON\Attoparsec.BMP.fs" />
-    <!--<Compile Include="RFC2616\FParsec.fs" />
-    <Compile Include="RFC2616\Attoparsec.fs" />-->
+    <Compile Include="RFC2616\FParsec.fs" />
+    <Compile Include="RFC2616\Attoparsec.fs" />
     <Compile Include="Benchmark.fs" />
     <Compile Include="BMPString.fs" />
     <Compile Include="StringParser.fs" />

@@ -28,7 +28,3 @@ module Helper =
   let inClass (s: string) c = charClass s |> Array.exists ((=) c)
 
   let notInClass s = not << inClass s
-
-  let (|Bmp|) s = BMPString.ofString s
-
-  let (|Bin|) array = ByteString.create array

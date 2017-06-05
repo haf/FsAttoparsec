@@ -39,17 +39,18 @@
   <ItemGroup>
     <Compile Include="AssemblyVersionInfo.fs" />
     <Folder Include="Internals\" />
+    <Compile Include="Internals\Helper.fs" />
     <Compile Include="Internals\Monoid.fs" />
     <Compile Include="Internals\ByteString.fs" />
     <Compile Include="Internals\BMPString.fs" />
     <Compile Include="Internals\Trampoline.fs" />
+    <Compile Include="Internals\Patterns.fs" />
     <Compile Include="ParseResult.fs" />
     <Compile Include="Parser.fs" />
-    <Compile Include="Helper.fs" />
-    <Compile Include="StringParser.fs" />
     <Compile Include="BinaryParser.fs" />
-    <Compile Include="TokenParser.fs" />
-    <Compile Include="ExprParser.fs" />
+    <Compile Include="Extensions\StringParser.fs" />
+    <Compile Include="Extensions\TokenParser.fs" />
+    <Compile Include="Extensions\ExprParser.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

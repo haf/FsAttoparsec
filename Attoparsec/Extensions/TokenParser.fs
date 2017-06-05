@@ -59,6 +59,7 @@ module Token =
   open Helper
 
   module private TokenParserImpl =
+    open Patterns
 
     let simpleSpace = skipMany1 (satisfy Char.IsWhiteSpace)
 
@@ -394,7 +395,7 @@ module Token =
         |> List.map BMPString.ofString
 
     let isReservedName languageDef (name: string) =
-      let (Bmp caseName) =
+      let (BMP caseName) =
         if languageDef.CaseSensitive then name
         else name.ToLower()
       isReserved (theReservedNames languageDef) caseName

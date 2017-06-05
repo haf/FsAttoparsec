@@ -1,6 +1,7 @@
 ﻿namespace Attoparsec
 
 open Helper
+open Patterns
 
 module Binary =
 
@@ -8,7 +9,7 @@ module Binary =
     let feed s (result: ParseResult<_, _>) = ParseResult.feed ByteString.monoid s result
     let done_ (result: ParseResult<_, _>) = ParseResult.done_ ByteString.monoid result
 
-  let parseOnly parser (Bin input) =
+  let parseOnly parser (ByteString input) =
     parseOnly ByteString.skip ByteString.monoid parser input
 
   let get = get ByteString.skip
@@ -47,7 +48,7 @@ module Binary =
   let takeText = takeText ByteString.monoid ByteString.length ByteString.skip List.fold
 
   let pbyte c = elem ((=) c) (Some ("'" + (string c) + "'"))
-  let bytes (Bin b) =
+  let bytes (ByteString b) =
     takeWith (ByteString.length b) ((=) b) (Some (b.ToString()))
 
   let takeWhile1 p =
@@ -55,7 +56,7 @@ module Binary =
 
   let scan s p = scan ByteString.monoid ByteString.head ByteString.tail ByteString.take ByteString.length ByteString.skip s p
 
-  let parse p (Bin init) = parse ByteString.skip ByteString.monoid p init
+  let parse p (ByteString init) = parse ByteString.skip ByteString.monoid p init
 
   let endOfInput = endOfInput ByteString.length
 

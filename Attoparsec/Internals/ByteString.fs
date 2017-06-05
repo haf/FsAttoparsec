@@ -86,7 +86,6 @@ type ByteString(array: byte[], offset: int, count: int) =
     member x.GetEnumerator() = x.GetEnumerator()
     member x.GetEnumerator() = x.GetEnumerator() :> IEnumerator
 
-[<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module ByteString =
 
   let empty = ByteString([||])
@@ -104,27 +103,27 @@ module ByteString =
 
   let ofList l = ByteString(Array.ofList l, 0, l.Length)
 
-  let toArray (bs:ByteString) =
+  let toArray (bs: ByteString) =
     if bs.Count = 0 then [||]
     else bs.Array.[ bs.Offset .. (bs.Offset + bs.Count - 1) ]
 
-  let toSeq (bs:ByteString) = bs :> seq<byte>
+  let toSeq (bs: ByteString) = bs :> seq<byte>
 
-  let toList (bs:ByteString) = List.ofSeq bs
+  let toList (bs: ByteString) = List.ofSeq bs
 
-  let isEmpty (bs:ByteString) =
+  let isEmpty (bs: ByteString) =
     Contract.Requires(bs.Count >= 0)
     bs.Count <= 0
 
-  let length (bs:ByteString) =
+  let length (bs: ByteString) =
     Contract.Requires(bs.Count >= 0)
     bs.Count
 
-  let index (bs:ByteString) pos =
+  let index (bs: ByteString) pos =
     Contract.Requires(bs.Offset + pos <= bs.Count)
     bs.Array.[ bs.Offset + pos ]
 
-  let head (bs:ByteString) =
+  let head (bs: ByteString) =
     if bs.Count <= 0 then
       failwith "Cannot take the head of an empty Binary."
     else bs.Array.[ bs.Offset ]
@@ -193,6 +192,7 @@ module ByteString =
 
   let range pos n ba = take n (skip pos ba)
 
-  let monoid = { new Monoid<_> with
-    override x.mempty = empty
-    override x.mappend(a, b) = append a b }
+  let monoid =
+    { new Monoid<_> with
+      override x.mempty = empty
+      override x.mappend (a, b) = append a b }

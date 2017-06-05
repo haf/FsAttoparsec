@@ -2,6 +2,7 @@
 
 open System
 open Helper
+open Patterns
 
 module String =
 
@@ -51,10 +52,10 @@ module String =
 
   let pchar c = elem ((=) c) (Some ("'" + (string c) + "'"))
 
-  let pstring (Bmp s) =
+  let pstring (BMP s) =
     takeWith (BMPString.length s) ((=) s) (Some ("\"" + (BMPString.toString s) + "\""))
 
-  let stringTransform f (Bmp s) what =
+  let stringTransform f (BMP s) what =
     let what = match what with | Some s -> Some s | None -> Some "stringTransform(...)"
     takeWith (BMPString.length s) (fun x -> f x = f s) what
 
@@ -84,7 +85,7 @@ module String =
 
   let scan s p = scan monoid BMPString.head BMPString.tail BMPString.take BMPString.length BMPString.skip s p
 
-  let parse p (Bmp init) = parse BMPString.skip monoid p init
+  let parse p (BMP init) = parse BMPString.skip monoid p init
 
   let endOfInput = endOfInput BMPString.length
 
