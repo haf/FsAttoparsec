@@ -26,7 +26,7 @@ type Request =
   static member create m u v =
     { requestMethod = m
       requestUri = u
-      requestVersion v }
+      requestVersion = v }
 
 // httpVersion :: Parser ByteString
 let httpVersion = "HTTP/" *> P.takeWhile (fun c -> isDigit_w8 c || c == 46)

@@ -8,14 +8,14 @@ Frequency=10000000 Hz, Resolution=100.0000 ns, Timer=UNKNOWN
 
 
 ```
- |     Method |              file |           Mean |        Error |       StdDev |         Median | Scaled | ScaledSD |
- |----------- |------------------ |---------------:|-------------:|-------------:|---------------:|-------:|---------:|
- |    **FParsec** | **05.feature-pieces** |    **79,755.4 us** |  **1,489.26 us** |  **2,723.20 us** |    **79,999.6 us** |   **1.00** |     **0.00** |
- | Attoparsec | 05.feature-pieces | 1,294,765.5 us | 24,383.71 us | 22,808.53 us | 1,295,128.8 us |  16.25 |     0.62 |
- |    **FParsec** |           **numbers** |       **556.5 us** |     **11.01 us** |     **27.22 us** |       **545.6 us** |   **1.00** |     **0.00** |
- | Attoparsec |           numbers |             NA |           NA |           NA |             NA |      ? |        ? |
- |    **FParsec** |        **twitter100** |     **2,501.9 us** |     **49.25 us** |     **82.28 us** |     **2,494.4 us** |   **1.00** |     **0.00** |
- | Attoparsec |        twitter100 |    54,971.2 us |    704.41 us |    588.22 us |    55,246.1 us |  21.99 |     0.73 |
+ |     Method |              file |           Mean |        Error |       StdDev | Scaled | ScaledSD |
+ |----------- |------------------ |---------------:|-------------:|-------------:|-------:|---------:|
+ |    **FParsec** | **05.feature-pieces** |    **80,514.7 us** |  **1,604.85 us** |  **3,205.05 us** |   **1.00** |     **0.00** |
+ | Attoparsec | 05.feature-pieces | 1,389,026.1 us | 26,654.33 us | 28,519.83 us |  17.28 |     0.77 |
+ |    **FParsec** |           **numbers** |       **572.9 us** |     **11.36 us** |     **27.21 us** |   **1.00** |     **0.00** |
+ | Attoparsec |           numbers |             NA |           NA |           NA |      ? |        ? |
+ |    **FParsec** |        **twitter100** |     **2,468.7 us** |     **48.31 us** |     **72.31 us** |   **1.00** |     **0.00** |
+ | Attoparsec |        twitter100 |    65,116.2 us |  1,244.52 us |  1,383.28 us |  26.40 |     0.94 |
 
 Benchmarks with issues:
   JSONParsing.Attoparsec: DefaultJob [file=numbers]
