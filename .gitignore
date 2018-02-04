@@ -4,3 +4,4 @@ packages/
 paket.exe
 AssemblyVersionInfo.fs
 build/
+.DS_Store
